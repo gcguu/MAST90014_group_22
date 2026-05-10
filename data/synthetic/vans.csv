@@ -1,0 +1,6 @@
+van_id,capacity_kg,fuel_cost_per_km,has_refrigeration
+van_1,600,0.45,True
+van_2,600,0.45,True
+van_3,700,0.5,True
+van_4,700,0.5,True
+van_5,500,0.4,True

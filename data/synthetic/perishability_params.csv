@@ -1,0 +1,7 @@
+parameter,value,description
+T_max_hours,3.0,Default max route duration for vans carrying milk (hours)
+T_max_hours_alt1,2.0,Tight scenario for sensitivity analysis
+T_max_hours_alt2,4.0,Relaxed scenario for sensitivity analysis
+milk_spoilage_cost_per_hour,0.15,Cost penalty per litre of milk per hour on the van ($/L/hr)
+loading_time_minutes,15.0,Time to load a van at the depot (minutes)
+service_time_minutes,5.0,Time to unload/service at each cafe (minutes)
