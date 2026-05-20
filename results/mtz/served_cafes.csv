@@ -1,0 +1,36 @@
+node_type,name,van_id,latitude,longitude,served
+depot,Peter Hall Building UniMelb,,-37.7982158,144.9636857,1
+cafe,Proud Mary Coffee,van_5,-37.8023383,144.9851717,1
+cafe,Patricia Coffee Brewers,van_3,-37.8146934,144.9582383,1
+cafe,Seven Seeds Coffee Roasters,van_2,-37.8029711,144.9590027,1
+cafe,Industry Beans Fitzroy,van_2,-37.7948113,144.9781341,1
+cafe,Market Lane Coffee HQ,van_2,-37.776348,144.972123,1
+cafe,ST. ALi Coffee Roasters,van_5,-37.8312475,144.960354,1
+cafe,Code Black Coffee Brunswick,van_2,-37.774643,144.962468,1
+cafe,Axil Coffee Roasters,van_5,-37.8226075,145.0342781,1
+cafe,Dukes Coffee Roasters,van_3,-37.816791,144.966162,1
+cafe,Rumble Coffee Roasters,van_5,-37.7947678,144.9342535,1
+cafe,Wide Open Road,van_2,-37.7763047,144.9612147,1
+cafe,Aunty Peg's,van_5,-37.8028093,144.9870052,1
+cafe,Brother Baba Budan,van_3,-37.813541,144.9620988,1
+cafe,Lune Croissanterie Fitzroy,van_2,-37.7959659,144.9799313,1
+cafe,Small Batch Roasting Co.,van_2,-37.8043369,144.9545001,1
+cafe,Padre Coffee Brunswick East,van_2,-37.7641144,144.9732824,1
+cafe,Jasper Coffee Fitzroy,van_5,-37.799384,144.9781281,1
+cafe,Everyday Coffee,van_5,-37.7981641,144.9858767,1
+cafe,MAKER Coffee South Yarra,van_5,-37.8394531,144.9963319,1
+cafe,Square Lane Coffee,van_5,-37.8269479,144.9929394,1
+cafe,Disciple Roasters,van_2,-37.775525,144.9601403,1
+cafe,Coffee Supreme,van_5,-37.8091416,145.006767,1
+cafe,Market Lane Prahran Market,van_5,-37.845757,144.993288,1
+cafe,Veneziano Coffee Richmond,van_5,-37.8169555,145.0131324,1
+cafe,Five Senses Coffee,van_5,-37.8108846,144.9455841,1
+cafe,Standing Room Fitzroy North,van_2,-37.7847929,144.9823376,1
+cafe,Bench Coffee Co. Roastery,van_2,-37.761889,144.961811,1
+cafe,Path Melbourne,van_2,-37.8054501,144.9542036,1
+cafe,Little Rogue,van_3,-37.810993,144.964066,1
+cafe,Vacation Coffee CBD,van_3,-37.8158579,144.9720281,1
+cafe,Market Lane Carlton,van_3,-37.8014,144.9672,1
+cafe,Traveller Coffee,van_3,-37.8109,144.9668,1
+cafe,Core Roasters,van_2,-37.7775,144.9722,1
+cafe,Project Zero,van_3,-37.8175,144.964,1
