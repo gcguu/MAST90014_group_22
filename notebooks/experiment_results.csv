@@ -1,0 +1,5 @@
+Instance,Gurobi Profit ($),Gurobi Time (s),Gurobi Gap (%),Gurobi Dist (km),Cafes Served,Heuristic Profit ($),Heuristic Dist (km)
+"Small (10c, 2v)",1009.61,0.49,0.0,33.93,10,1016.62,41.72
+"Medium (15c, 3v)",1486.24,127.22,0.01,35.55,15,1496.03,46.6
+"Full (34c, 3v)",2874.08,300.05,0.27,55.13,34,2896.1,66.86
+"Full (34c, 5v)",2875.14,300.05,0.29,55.97,34,2896.1,66.86

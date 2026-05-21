@@ -1,0 +1,217 @@
+van_id,cafe_name,product_id,quantity,unit_weight_kg,total_weight_kg,margin_per_unit,total_margin
+van_1,Industry Beans Fitzroy,milk_full,23.0,1.03,23.69,1.4,32.199999999999996
+van_1,Industry Beans Fitzroy,milk_oat,6.0,1.03,6.18,2.1,12.600000000000001
+van_1,Industry Beans Fitzroy,milk_soy,3.0,1.02,3.06,1.9,5.699999999999999
+van_1,Industry Beans Fitzroy,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_1,Industry Beans Fitzroy,bean_house,3.0,1.0,3.0,8.5,25.5
+van_1,Industry Beans Fitzroy,bean_single,2.0,1.0,2.0,12.0,24.0
+van_1,Industry Beans Fitzroy,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_1,Market Lane Coffee HQ,milk_full,13.0,1.03,13.39,1.4,18.2
+van_1,Market Lane Coffee HQ,milk_oat,3.0,1.03,3.09,2.1,6.300000000000001
+van_1,Market Lane Coffee HQ,milk_soy,2.0,1.02,2.04,1.9,3.8
+van_1,Market Lane Coffee HQ,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_1,Market Lane Coffee HQ,bean_house,2.0,1.0,2.0,8.5,17.0
+van_1,Market Lane Coffee HQ,bean_single,1.0,1.0,1.0,12.0,12.0
+van_1,Code Black Coffee Brunswick,milk_full,14.0,1.03,14.42,1.4,19.599999999999998
+van_1,Code Black Coffee Brunswick,milk_oat,2.0,1.03,2.06,2.1,4.2
+van_1,Code Black Coffee Brunswick,milk_soy,2.0,1.02,2.04,1.9,3.8
+van_1,Code Black Coffee Brunswick,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_1,Code Black Coffee Brunswick,bean_house,1.0,1.0,1.0,8.5,8.5
+van_1,Code Black Coffee Brunswick,bean_single,1.0,1.0,1.0,12.0,12.0
+van_1,Code Black Coffee Brunswick,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_1,Wide Open Road,milk_full,16.0,1.03,16.48,1.4,22.4
+van_1,Wide Open Road,milk_oat,3.0,1.03,3.09,2.1,6.300000000000001
+van_1,Wide Open Road,milk_soy,1.0,1.02,1.02,1.9,1.9
+van_1,Wide Open Road,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_1,Wide Open Road,bean_house,1.0,1.0,1.0,8.5,8.5
+van_1,Wide Open Road,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_1,Lune Croissanterie Fitzroy,milk_full,16.0,1.03,16.48,1.4,22.4
+van_1,Lune Croissanterie Fitzroy,milk_oat,3.0,1.03,3.09,2.1,6.300000000000001
+van_1,Lune Croissanterie Fitzroy,milk_soy,3.0,1.02,3.06,1.9,5.699999999999999
+van_1,Lune Croissanterie Fitzroy,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_1,Lune Croissanterie Fitzroy,bean_house,1.0,1.0,1.0,8.5,8.5
+van_1,Lune Croissanterie Fitzroy,bean_single,1.0,1.0,1.0,12.0,12.0
+van_1,Padre Coffee Brunswick East,milk_full,11.0,1.03,11.33,1.4,15.399999999999999
+van_1,Padre Coffee Brunswick East,milk_oat,3.0,1.03,3.09,2.1,6.300000000000001
+van_1,Padre Coffee Brunswick East,milk_soy,1.0,1.02,1.02,1.9,1.9
+van_1,Padre Coffee Brunswick East,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_1,Padre Coffee Brunswick East,bean_house,1.0,1.0,1.0,8.5,8.5
+van_1,Padre Coffee Brunswick East,bean_single,1.0,1.0,1.0,12.0,12.0
+van_1,Disciple Roasters,milk_full,20.0,1.03,20.6,1.4,28.0
+van_1,Disciple Roasters,milk_oat,6.0,1.03,6.18,2.1,12.600000000000001
+van_1,Disciple Roasters,milk_soy,2.0,1.02,2.04,1.9,3.8
+van_1,Disciple Roasters,milk_almond,3.0,1.02,3.06,2.3,6.8999999999999995
+van_1,Disciple Roasters,bean_house,2.0,1.0,2.0,8.5,17.0
+van_1,Disciple Roasters,bean_single,1.0,1.0,1.0,12.0,12.0
+van_1,Standing Room Fitzroy North,milk_full,17.0,1.03,17.51,1.4,23.799999999999997
+van_1,Standing Room Fitzroy North,milk_oat,6.0,1.03,6.18,2.1,12.600000000000001
+van_1,Standing Room Fitzroy North,milk_soy,3.0,1.02,3.06,1.9,5.699999999999999
+van_1,Standing Room Fitzroy North,milk_almond,3.0,1.02,3.06,2.3,6.8999999999999995
+van_1,Standing Room Fitzroy North,bean_house,2.0,1.0,2.0,8.5,17.0
+van_1,Standing Room Fitzroy North,bean_single,1.0,1.0,1.0,12.0,12.0
+van_1,Bench Coffee Co. Roastery,milk_full,14.0,1.03,14.42,1.4,19.599999999999998
+van_1,Bench Coffee Co. Roastery,milk_oat,2.0,1.03,2.06,2.1,4.2
+van_1,Bench Coffee Co. Roastery,milk_soy,1.0,1.02,1.02,1.9,1.9
+van_1,Bench Coffee Co. Roastery,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_1,Bench Coffee Co. Roastery,bean_house,1.0,1.0,1.0,8.5,8.5
+van_1,Bench Coffee Co. Roastery,bean_single,1.0,1.0,1.0,12.0,12.0
+van_1,Bench Coffee Co. Roastery,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_1,Core Roasters,milk_full,14.0,1.03,14.42,1.4,19.599999999999998
+van_1,Core Roasters,milk_oat,4.0,1.03,4.12,2.1,8.4
+van_1,Core Roasters,milk_soy,3.0,1.02,3.06,1.9,5.699999999999999
+van_1,Core Roasters,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_1,Core Roasters,bean_house,1.0,1.0,1.0,8.5,8.5
+van_1,Core Roasters,bean_single,1.0,1.0,1.0,12.0,12.0
+van_2,Patricia Coffee Brewers,milk_full,51.0,1.03,52.53,1.4,71.39999999999999
+van_2,Patricia Coffee Brewers,milk_oat,12.0,1.03,12.36,2.1,25.200000000000003
+van_2,Patricia Coffee Brewers,milk_soy,7.0,1.02,7.140000000000001,1.9,13.299999999999999
+van_2,Patricia Coffee Brewers,milk_almond,6.0,1.02,6.12,2.3,13.799999999999999
+van_2,Patricia Coffee Brewers,bean_house,5.0,1.0,5.0,8.5,42.5
+van_2,Patricia Coffee Brewers,bean_single,3.0,1.0,3.0,12.0,36.0
+van_2,Patricia Coffee Brewers,bean_decaf,2.0,1.0,2.0,9.5,19.0
+van_2,Seven Seeds Coffee Roasters,milk_full,14.0,1.03,14.42,1.4,19.599999999999998
+van_2,Seven Seeds Coffee Roasters,milk_oat,6.0,1.03,6.18,2.1,12.600000000000001
+van_2,Seven Seeds Coffee Roasters,milk_soy,3.0,1.02,3.06,1.9,5.699999999999999
+van_2,Seven Seeds Coffee Roasters,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_2,Seven Seeds Coffee Roasters,bean_house,2.0,1.0,2.0,8.5,17.0
+van_2,Seven Seeds Coffee Roasters,bean_single,2.0,1.0,2.0,12.0,24.0
+van_2,Seven Seeds Coffee Roasters,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_2,Dukes Coffee Roasters,milk_full,22.0,1.03,22.66,1.4,30.799999999999997
+van_2,Dukes Coffee Roasters,milk_oat,3.0,1.03,3.09,2.1,6.300000000000001
+van_2,Dukes Coffee Roasters,milk_soy,5.0,1.02,5.1,1.9,9.5
+van_2,Dukes Coffee Roasters,milk_almond,3.0,1.02,3.06,2.3,6.8999999999999995
+van_2,Dukes Coffee Roasters,bean_house,3.0,1.0,3.0,8.5,25.5
+van_2,Dukes Coffee Roasters,bean_single,1.0,1.0,1.0,12.0,12.0
+van_2,Brother Baba Budan,milk_full,31.0,1.03,31.93,1.4,43.4
+van_2,Brother Baba Budan,milk_oat,11.0,1.03,11.33,2.1,23.1
+van_2,Brother Baba Budan,milk_soy,6.0,1.02,6.12,1.9,11.399999999999999
+van_2,Brother Baba Budan,milk_almond,4.0,1.02,4.08,2.3,9.2
+van_2,Brother Baba Budan,bean_house,3.0,1.0,3.0,8.5,25.5
+van_2,Brother Baba Budan,bean_single,3.0,1.0,3.0,12.0,36.0
+van_2,Brother Baba Budan,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_2,Small Batch Roasting Co.,milk_full,16.0,1.03,16.48,1.4,22.4
+van_2,Small Batch Roasting Co.,milk_oat,3.0,1.03,3.09,2.1,6.300000000000001
+van_2,Small Batch Roasting Co.,milk_soy,3.0,1.02,3.06,1.9,5.699999999999999
+van_2,Small Batch Roasting Co.,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_2,Small Batch Roasting Co.,bean_house,1.0,1.0,1.0,8.5,8.5
+van_2,Path Melbourne,milk_full,25.0,1.03,25.75,1.4,35.0
+van_2,Path Melbourne,milk_oat,7.0,1.03,7.21,2.1,14.700000000000001
+van_2,Path Melbourne,milk_soy,5.0,1.02,5.1,1.9,9.5
+van_2,Path Melbourne,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_2,Path Melbourne,bean_house,1.0,1.0,1.0,8.5,8.5
+van_2,Path Melbourne,bean_single,1.0,1.0,1.0,12.0,12.0
+van_2,Path Melbourne,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_2,Little Rogue,milk_full,15.0,1.03,15.450000000000001,1.4,21.0
+van_2,Little Rogue,milk_oat,7.0,1.03,7.21,2.1,14.700000000000001
+van_2,Little Rogue,milk_soy,5.0,1.02,5.1,1.9,9.5
+van_2,Little Rogue,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_2,Little Rogue,bean_house,2.0,1.0,2.0,8.5,17.0
+van_2,Little Rogue,bean_single,2.0,1.0,2.0,12.0,24.0
+van_2,Vacation Coffee CBD,milk_full,13.0,1.03,13.39,1.4,18.2
+van_2,Vacation Coffee CBD,milk_oat,4.0,1.03,4.12,2.1,8.4
+van_2,Vacation Coffee CBD,milk_soy,3.0,1.02,3.06,1.9,5.699999999999999
+van_2,Vacation Coffee CBD,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_2,Vacation Coffee CBD,bean_house,1.0,1.0,1.0,8.5,8.5
+van_2,Traveller Coffee,milk_full,16.0,1.03,16.48,1.4,22.4
+van_2,Traveller Coffee,milk_oat,2.0,1.03,2.06,2.1,4.2
+van_2,Traveller Coffee,milk_soy,1.0,1.02,1.02,1.9,1.9
+van_2,Traveller Coffee,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_2,Traveller Coffee,bean_house,1.0,1.0,1.0,8.5,8.5
+van_2,Traveller Coffee,bean_single,1.0,1.0,1.0,12.0,12.0
+van_2,Traveller Coffee,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_2,Project Zero,milk_full,54.0,1.03,55.620000000000005,1.4,75.6
+van_2,Project Zero,milk_oat,8.0,1.03,8.24,2.1,16.8
+van_2,Project Zero,milk_soy,7.0,1.02,7.140000000000001,1.9,13.299999999999999
+van_2,Project Zero,milk_almond,5.0,1.02,5.1,2.3,11.5
+van_2,Project Zero,bean_house,3.0,1.0,3.0,8.5,25.5
+van_2,Project Zero,bean_single,1.0,1.0,1.0,12.0,12.0
+van_2,Project Zero,bean_decaf,2.0,1.0,2.0,9.5,19.0
+van_5,Proud Mary Coffee,milk_full,11.0,1.03,11.33,1.4,15.399999999999999
+van_5,Proud Mary Coffee,milk_oat,3.0,1.03,3.09,2.1,6.300000000000001
+van_5,Proud Mary Coffee,milk_soy,1.0,1.02,1.02,1.9,1.9
+van_5,Proud Mary Coffee,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_5,Proud Mary Coffee,bean_house,1.0,1.0,1.0,8.5,8.5
+van_5,Proud Mary Coffee,bean_single,1.0,1.0,1.0,12.0,12.0
+van_5,Proud Mary Coffee,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_5,ST. ALi Coffee Roasters,milk_full,16.0,1.03,16.48,1.4,22.4
+van_5,ST. ALi Coffee Roasters,milk_oat,3.0,1.03,3.09,2.1,6.300000000000001
+van_5,ST. ALi Coffee Roasters,milk_soy,3.0,1.02,3.06,1.9,5.699999999999999
+van_5,ST. ALi Coffee Roasters,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_5,ST. ALi Coffee Roasters,bean_house,1.0,1.0,1.0,8.5,8.5
+van_5,ST. ALi Coffee Roasters,bean_single,1.0,1.0,1.0,12.0,12.0
+van_5,ST. ALi Coffee Roasters,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_5,Axil Coffee Roasters,milk_full,48.0,1.03,49.44,1.4,67.19999999999999
+van_5,Axil Coffee Roasters,milk_oat,14.0,1.03,14.42,2.1,29.400000000000002
+van_5,Axil Coffee Roasters,milk_soy,8.0,1.02,8.16,1.9,15.2
+van_5,Axil Coffee Roasters,milk_almond,6.0,1.02,6.12,2.3,13.799999999999999
+van_5,Axil Coffee Roasters,bean_house,3.0,1.0,3.0,8.5,25.5
+van_5,Axil Coffee Roasters,bean_single,1.0,1.0,1.0,12.0,12.0
+van_5,Axil Coffee Roasters,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_5,Rumble Coffee Roasters,milk_full,21.0,1.03,21.63,1.4,29.4
+van_5,Rumble Coffee Roasters,milk_oat,5.0,1.03,5.15,2.1,10.5
+van_5,Rumble Coffee Roasters,milk_soy,4.0,1.02,4.08,1.9,7.6
+van_5,Rumble Coffee Roasters,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_5,Rumble Coffee Roasters,bean_house,3.0,1.0,3.0,8.5,25.5
+van_5,Rumble Coffee Roasters,bean_single,1.0,1.0,1.0,12.0,12.0
+van_5,Rumble Coffee Roasters,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_5,Aunty Peg's,milk_full,35.0,1.03,36.050000000000004,1.4,49.0
+van_5,Aunty Peg's,milk_oat,7.0,1.03,7.21,2.1,14.700000000000001
+van_5,Aunty Peg's,milk_soy,4.0,1.02,4.08,1.9,7.6
+van_5,Aunty Peg's,milk_almond,7.0,1.02,7.140000000000001,2.3,16.099999999999998
+van_5,Aunty Peg's,bean_house,3.0,1.0,3.0,8.5,25.5
+van_5,Aunty Peg's,bean_single,3.0,1.0,3.0,12.0,36.0
+van_5,Aunty Peg's,bean_decaf,2.0,1.0,2.0,9.5,19.0
+van_5,Jasper Coffee Fitzroy,milk_full,10.0,1.03,10.3,1.4,14.0
+van_5,Jasper Coffee Fitzroy,milk_oat,2.0,1.03,2.06,2.1,4.2
+van_5,Jasper Coffee Fitzroy,milk_soy,2.0,1.02,2.04,1.9,3.8
+van_5,Jasper Coffee Fitzroy,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_5,Jasper Coffee Fitzroy,bean_house,1.0,1.0,1.0,8.5,8.5
+van_5,Everyday Coffee,milk_full,24.0,1.03,24.72,1.4,33.599999999999994
+van_5,Everyday Coffee,milk_oat,7.0,1.03,7.21,2.1,14.700000000000001
+van_5,Everyday Coffee,milk_soy,5.0,1.02,5.1,1.9,9.5
+van_5,Everyday Coffee,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_5,Everyday Coffee,bean_house,3.0,1.0,3.0,8.5,25.5
+van_5,Everyday Coffee,bean_single,1.0,1.0,1.0,12.0,12.0
+van_5,MAKER Coffee South Yarra,milk_full,19.0,1.03,19.57,1.4,26.599999999999998
+van_5,MAKER Coffee South Yarra,milk_oat,6.0,1.03,6.18,2.1,12.600000000000001
+van_5,MAKER Coffee South Yarra,milk_soy,3.0,1.02,3.06,1.9,5.699999999999999
+van_5,MAKER Coffee South Yarra,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_5,MAKER Coffee South Yarra,bean_house,1.0,1.0,1.0,8.5,8.5
+van_5,MAKER Coffee South Yarra,bean_single,2.0,1.0,2.0,12.0,24.0
+van_5,Square Lane Coffee,milk_full,14.0,1.03,14.42,1.4,19.599999999999998
+van_5,Square Lane Coffee,milk_oat,3.0,1.03,3.09,2.1,6.300000000000001
+van_5,Square Lane Coffee,milk_soy,2.0,1.02,2.04,1.9,3.8
+van_5,Square Lane Coffee,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_5,Square Lane Coffee,bean_house,1.0,1.0,1.0,8.5,8.5
+van_5,Square Lane Coffee,bean_single,1.0,1.0,1.0,12.0,12.0
+van_5,Square Lane Coffee,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_5,Coffee Supreme,milk_full,10.0,1.03,10.3,1.4,14.0
+van_5,Coffee Supreme,milk_oat,4.0,1.03,4.12,2.1,8.4
+van_5,Coffee Supreme,milk_soy,2.0,1.02,2.04,1.9,3.8
+van_5,Coffee Supreme,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_5,Coffee Supreme,bean_house,2.0,1.0,2.0,8.5,17.0
+van_5,Market Lane Prahran Market,milk_full,12.0,1.03,12.36,1.4,16.799999999999997
+van_5,Market Lane Prahran Market,milk_oat,4.0,1.03,4.12,2.1,8.4
+van_5,Market Lane Prahran Market,milk_soy,2.0,1.02,2.04,1.9,3.8
+van_5,Market Lane Prahran Market,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_5,Market Lane Prahran Market,bean_house,1.0,1.0,1.0,8.5,8.5
+van_5,Market Lane Prahran Market,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_5,Veneziano Coffee Richmond,milk_full,14.0,1.03,14.42,1.4,19.599999999999998
+van_5,Veneziano Coffee Richmond,milk_oat,2.0,1.03,2.06,2.1,4.2
+van_5,Veneziano Coffee Richmond,milk_soy,3.0,1.02,3.06,1.9,5.699999999999999
+van_5,Veneziano Coffee Richmond,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_5,Veneziano Coffee Richmond,bean_house,2.0,1.0,2.0,8.5,17.0
+van_5,Veneziano Coffee Richmond,bean_single,1.0,1.0,1.0,12.0,12.0
+van_5,Five Senses Coffee,milk_full,24.0,1.03,24.72,1.4,33.599999999999994
+van_5,Five Senses Coffee,milk_oat,3.0,1.03,3.09,2.1,6.300000000000001
+van_5,Five Senses Coffee,milk_soy,5.0,1.02,5.1,1.9,9.5
+van_5,Five Senses Coffee,milk_almond,1.0,1.02,1.02,2.3,2.3
+van_5,Five Senses Coffee,bean_house,2.0,1.0,2.0,8.5,17.0
+van_5,Five Senses Coffee,bean_single,1.0,1.0,1.0,12.0,12.0
+van_5,Five Senses Coffee,bean_decaf,1.0,1.0,1.0,9.5,9.5
+van_5,Market Lane Carlton,milk_full,19.0,1.03,19.57,1.4,26.599999999999998
+van_5,Market Lane Carlton,milk_oat,7.0,1.03,7.21,2.1,14.700000000000001
+van_5,Market Lane Carlton,milk_soy,5.0,1.02,5.1,1.9,9.5
+van_5,Market Lane Carlton,milk_almond,2.0,1.02,2.04,2.3,4.6
+van_5,Market Lane Carlton,bean_house,2.0,1.0,2.0,8.5,17.0
+van_5,Market Lane Carlton,bean_single,2.0,1.0,2.0,12.0,24.0

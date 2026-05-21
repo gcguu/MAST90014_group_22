@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_691dd1108c476b63e78062d6176e2e8c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    width: 180px;
+    background-color: white;
+    border:2px solid grey;
+    z-index:9999;
+    font-size:14px;
+    padding: 10px;
+    ">
+    <b>Vehicle Routes</b><br>
+    <span style="color:purple;">●</span> van_1<br>
+    <span style="color:blue;">●</span> van_2<br>
+    <span style="color:green;">●</span> van_3<br>
+    <span style="color:orange;">●</span> van_4<br>
+    <span style="color:red;">●</span> van_5<br>
+    <span style="color:darkred;">●</span> van_6<br>
+    <span style="color:black;">●</span> depot
+    </div>
+    
+    
+            <div class="folium-map" id="map_691dd1108c476b63e78062d6176e2e8c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_691dd1108c476b63e78062d6176e2e8c = L.map(
+                "map_691dd1108c476b63e78062d6176e2e8c",
+                {
+                    center: [-37.80271436, 144.97339250857144],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e21c25e4a16c5fd1cca02265ca0fd1fe = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e21c25e4a16c5fd1cca02265ca0fd1fe.addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            var poly_line_75a37ac2a1486c1fa169d1a399b232e9 = L.polyline(
+                [[-37.7982158, 144.9636857], [-37.7959659, 144.9799313]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_75a37ac2a1486c1fa169d1a399b232e9.bindTooltip(
+                `<div>
+                     van_2<br>Peter Hall Building UniMelb → Lune Croissanterie Fitzroy<br>Distance: 1.77 km<br>Travel time: 0.07 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_bbd13973bbdcb239905da6f79f0b7f3f = L.polyline(
+                [[-37.8029711, 144.9590027], [-37.7982158, 144.9636857]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_bbd13973bbdcb239905da6f79f0b7f3f.bindTooltip(
+                `<div>
+                     van_2<br>Seven Seeds Coffee Roasters → Peter Hall Building UniMelb<br>Distance: 1.05 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_855a4bb41a7494cb688f61bb8eb5985d = L.polyline(
+                [[-37.7948113, 144.9781341], [-37.7847929, 144.9823376]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_855a4bb41a7494cb688f61bb8eb5985d.bindTooltip(
+                `<div>
+                     van_2<br>Industry Beans Fitzroy → Standing Room Fitzroy North<br>Distance: 1.42 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_11457875f1950add166d7e37f5bb90a8 = L.polyline(
+                [[-37.776348, 144.972123], [-37.7775, 144.9722]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_11457875f1950add166d7e37f5bb90a8.bindTooltip(
+                `<div>
+                     van_2<br>Market Lane Coffee HQ → Core Roasters<br>Distance: 0.29 km<br>Travel time: 0.01 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5f708844fc82bf768e98ff630c3cfc8e = L.polyline(
+                [[-37.774643, 144.962468], [-37.7763047, 144.9612147]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_5f708844fc82bf768e98ff630c3cfc8e.bindTooltip(
+                `<div>
+                     van_2<br>Code Black Coffee Brunswick → Wide Open Road<br>Distance: 0.35 km<br>Travel time: 0.01 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a8fa6964ace2d8fc98890d75e7899188 = L.polyline(
+                [[-37.7763047, 144.9612147], [-37.775525, 144.9601403]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_a8fa6964ace2d8fc98890d75e7899188.bindTooltip(
+                `<div>
+                     van_2<br>Wide Open Road → Disciple Roasters<br>Distance: 0.18 km<br>Travel time: 0.01 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_07c23d1789a0c5598b9e3fae7b728433 = L.polyline(
+                [[-37.7959659, 144.9799313], [-37.7948113, 144.9781341]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_07c23d1789a0c5598b9e3fae7b728433.bindTooltip(
+                `<div>
+                     van_2<br>Lune Croissanterie Fitzroy → Industry Beans Fitzroy<br>Distance: 0.38 km<br>Travel time: 0.02 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_652fc861d1c82bc2334f8935c70fdcac = L.polyline(
+                [[-37.8043369, 144.9545001], [-37.8054501, 144.9542036]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_652fc861d1c82bc2334f8935c70fdcac.bindTooltip(
+                `<div>
+                     van_2<br>Small Batch Roasting Co. → Path Melbourne<br>Distance: 0.18 km<br>Travel time: 0.01 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_468e34dc9293a87a02d22461f6181f80 = L.polyline(
+                [[-37.7641144, 144.9732824], [-37.761889, 144.961811]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_468e34dc9293a87a02d22461f6181f80.bindTooltip(
+                `<div>
+                     van_2<br>Padre Coffee Brunswick East → Bench Coffee Co. Roastery<br>Distance: 1.50 km<br>Travel time: 0.05 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_1014b7cefb4d3608f199c1458725aa83 = L.polyline(
+                [[-37.775525, 144.9601403], [-37.8043369, 144.9545001]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_1014b7cefb4d3608f199c1458725aa83.bindTooltip(
+                `<div>
+                     van_2<br>Disciple Roasters → Small Batch Roasting Co.<br>Distance: 3.60 km<br>Travel time: 0.09 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_6c4dc239519fbaa29b246dfac6d2665a = L.polyline(
+                [[-37.7847929, 144.9823376], [-37.776348, 144.972123]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_6c4dc239519fbaa29b246dfac6d2665a.bindTooltip(
+                `<div>
+                     van_2<br>Standing Room Fitzroy North → Market Lane Coffee HQ<br>Distance: 1.79 km<br>Travel time: 0.06 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b5add4c3325313b886723174e42d4af8 = L.polyline(
+                [[-37.761889, 144.961811], [-37.774643, 144.962468]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_b5add4c3325313b886723174e42d4af8.bindTooltip(
+                `<div>
+                     van_2<br>Bench Coffee Co. Roastery → Code Black Coffee Brunswick<br>Distance: 1.69 km<br>Travel time: 0.07 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_41193c747824c030a1b3949d56bd9da0 = L.polyline(
+                [[-37.8054501, 144.9542036], [-37.8029711, 144.9590027]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_41193c747824c030a1b3949d56bd9da0.bindTooltip(
+                `<div>
+                     van_2<br>Path Melbourne → Seven Seeds Coffee Roasters<br>Distance: 0.91 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_0a4cec10739b61623a2c4977f1cbb367 = L.polyline(
+                [[-37.7775, 144.9722], [-37.7641144, 144.9732824]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_0a4cec10739b61623a2c4977f1cbb367.bindTooltip(
+                `<div>
+                     van_2<br>Core Roasters → Padre Coffee Brunswick East<br>Distance: 1.60 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_815f9f9c0786842f32e69046c272b499 = L.polyline(
+                [[-37.7982158, 144.9636857], [-37.8014, 144.9672]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_815f9f9c0786842f32e69046c272b499.bindTooltip(
+                `<div>
+                     van_3<br>Peter Hall Building UniMelb → Market Lane Carlton<br>Distance: 0.94 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b39437a67f6e8894a57b28f501b7fd68 = L.polyline(
+                [[-37.8146934, 144.9582383], [-37.813541, 144.9620988]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_b39437a67f6e8894a57b28f501b7fd68.bindTooltip(
+                `<div>
+                     van_3<br>Patricia Coffee Brewers → Brother Baba Budan<br>Distance: 0.89 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_943f9b8ab96ca9736529aaf064aa6f04 = L.polyline(
+                [[-37.816791, 144.966162], [-37.8175, 144.964]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_943f9b8ab96ca9736529aaf064aa6f04.bindTooltip(
+                `<div>
+                     van_3<br>Dukes Coffee Roasters → Project Zero<br>Distance: 0.22 km<br>Travel time: 0.02 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_edf0d26b69032705906e03361c4e0a56 = L.polyline(
+                [[-37.813541, 144.9620988], [-37.810993, 144.964066]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_edf0d26b69032705906e03361c4e0a56.bindTooltip(
+                `<div>
+                     van_3<br>Brother Baba Budan → Little Rogue<br>Distance: 0.69 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_545089f90984c77281b0c92d8f4e2cfc = L.polyline(
+                [[-37.810993, 144.964066], [-37.8109, 144.9668]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_545089f90984c77281b0c92d8f4e2cfc.bindTooltip(
+                `<div>
+                     van_3<br>Little Rogue → Traveller Coffee<br>Distance: 0.31 km<br>Travel time: 0.01 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e606d590f26ef3c8bb6ebc19dfda7e96 = L.polyline(
+                [[-37.8158579, 144.9720281], [-37.816791, 144.966162]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_e606d590f26ef3c8bb6ebc19dfda7e96.bindTooltip(
+                `<div>
+                     van_3<br>Vacation Coffee CBD → Dukes Coffee Roasters<br>Distance: 0.76 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e25d2c32570fafd2c226e40ad97625bf = L.polyline(
+                [[-37.8014, 144.9672], [-37.8158579, 144.9720281]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_e25d2c32570fafd2c226e40ad97625bf.bindTooltip(
+                `<div>
+                     van_3<br>Market Lane Carlton → Vacation Coffee CBD<br>Distance: 2.00 km<br>Travel time: 0.07 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_191534920109aa3c9080b33a96c3da8e = L.polyline(
+                [[-37.8109, 144.9668], [-37.7982158, 144.9636857]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_191534920109aa3c9080b33a96c3da8e.bindTooltip(
+                `<div>
+                     van_3<br>Traveller Coffee → Peter Hall Building UniMelb<br>Distance: 1.68 km<br>Travel time: 0.06 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a48f58e35c800809af266e767341fe7e = L.polyline(
+                [[-37.8175, 144.964], [-37.8146934, 144.9582383]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_a48f58e35c800809af266e767341fe7e.bindTooltip(
+                `<div>
+                     van_3<br>Project Zero → Patricia Coffee Brewers<br>Distance: 0.81 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_919b7702a6c41c0f6ae73d213f920a4b = L.polyline(
+                [[-37.7982158, 144.9636857], [-37.799384, 144.9781281]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_919b7702a6c41c0f6ae73d213f920a4b.bindTooltip(
+                `<div>
+                     van_5<br>Peter Hall Building UniMelb → Jasper Coffee Fitzroy<br>Distance: 1.53 km<br>Travel time: 0.06 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f4caf13677bd6d71e977fb7edf544353 = L.polyline(
+                [[-37.8023383, 144.9851717], [-37.8028093, 144.9870052]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_f4caf13677bd6d71e977fb7edf544353.bindTooltip(
+                `<div>
+                     van_5<br>Proud Mary Coffee → Aunty Peg's<br>Distance: 0.36 km<br>Travel time: 0.02 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5ac73042b0e588aceb5ee73288739425 = L.polyline(
+                [[-37.8312475, 144.960354], [-37.8108846, 144.9455841]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_5ac73042b0e588aceb5ee73288739425.bindTooltip(
+                `<div>
+                     van_5<br>ST. ALi Coffee Roasters → Five Senses Coffee<br>Distance: 3.07 km<br>Travel time: 0.09 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_fe3415e9c079972f813ddf28cd7d60b4 = L.polyline(
+                [[-37.8226075, 145.0342781], [-37.8269479, 144.9929394]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_fe3415e9c079972f813ddf28cd7d60b4.bindTooltip(
+                `<div>
+                     van_5<br>Axil Coffee Roasters → Square Lane Coffee<br>Distance: 4.83 km<br>Travel time: 0.13 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_0613dc1dd31dd5bba278439ec992ca32 = L.polyline(
+                [[-37.7947678, 144.9342535], [-37.7982158, 144.9636857]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_0613dc1dd31dd5bba278439ec992ca32.bindTooltip(
+                `<div>
+                     van_5<br>Rumble Coffee Roasters → Peter Hall Building UniMelb<br>Distance: 3.20 km<br>Travel time: 0.11 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_8dc446f5c60bb87739cc624eb15d602f = L.polyline(
+                [[-37.8028093, 144.9870052], [-37.8091416, 145.006767]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_8dc446f5c60bb87739cc624eb15d602f.bindTooltip(
+                `<div>
+                     van_5<br>Aunty Peg's → Coffee Supreme<br>Distance: 2.80 km<br>Travel time: 0.10 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d82d7fbdb85b59cf2c8d59d42f8e8be3 = L.polyline(
+                [[-37.799384, 144.9781281], [-37.7981641, 144.9858767]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_d82d7fbdb85b59cf2c8d59d42f8e8be3.bindTooltip(
+                `<div>
+                     van_5<br>Jasper Coffee Fitzroy → Everyday Coffee<br>Distance: 0.84 km<br>Travel time: 0.03 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_0eeafecd2dc654058974217168e4fa1e = L.polyline(
+                [[-37.7981641, 144.9858767], [-37.8023383, 144.9851717]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_0eeafecd2dc654058974217168e4fa1e.bindTooltip(
+                `<div>
+                     van_5<br>Everyday Coffee → Proud Mary Coffee<br>Distance: 0.69 km<br>Travel time: 0.03 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_c96895f76f6732015c1d3036017fc4c9 = L.polyline(
+                [[-37.8394531, 144.9963319], [-37.845757, 144.993288]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_c96895f76f6732015c1d3036017fc4c9.bindTooltip(
+                `<div>
+                     van_5<br>MAKER Coffee South Yarra → Market Lane Prahran Market<br>Distance: 0.86 km<br>Travel time: 0.03 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a1757d8e0327fc4426e30a2151f893e5 = L.polyline(
+                [[-37.8269479, 144.9929394], [-37.8394531, 144.9963319]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_a1757d8e0327fc4426e30a2151f893e5.bindTooltip(
+                `<div>
+                     van_5<br>Square Lane Coffee → MAKER Coffee South Yarra<br>Distance: 2.38 km<br>Travel time: 0.07 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4b8f55d2388f1bfcbd74c69ce346278f = L.polyline(
+                [[-37.8091416, 145.006767], [-37.8169555, 145.0131324]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_4b8f55d2388f1bfcbd74c69ce346278f.bindTooltip(
+                `<div>
+                     van_5<br>Coffee Supreme → Veneziano Coffee Richmond<br>Distance: 1.51 km<br>Travel time: 0.05 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b060b0e5a0d56719a6c78e62c062a209 = L.polyline(
+                [[-37.845757, 144.993288], [-37.8312475, 144.960354]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_b060b0e5a0d56719a6c78e62c062a209.bindTooltip(
+                `<div>
+                     van_5<br>Market Lane Prahran Market → ST. ALi Coffee Roasters<br>Distance: 4.09 km<br>Travel time: 0.11 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_eca7593a93c4c7f5b14798bb6a58ea8e = L.polyline(
+                [[-37.8169555, 145.0131324], [-37.8226075, 145.0342781]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_eca7593a93c4c7f5b14798bb6a58ea8e.bindTooltip(
+                `<div>
+                     van_5<br>Veneziano Coffee Richmond → Axil Coffee Roasters<br>Distance: 2.27 km<br>Travel time: 0.05 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_74de4ac8ad051da676aa51181ed89489 = L.polyline(
+                [[-37.8108846, 144.9455841], [-37.7947678, 144.9342535]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            poly_line_74de4ac8ad051da676aa51181ed89489.bindTooltip(
+                `<div>
+                     van_5<br>Five Senses Coffee → Rumble Coffee Roasters<br>Distance: 2.54 km<br>Travel time: 0.07 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5c8eb5b3e66b2533b66d0f7ff800d3a4 = L.marker(
+                [-37.7982158, 144.9636857],
+                {
+}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+            var icon_ed2adb4267b1bf111d3a5c1226fbc51b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a72f75a7f6d0b187032cbfe693a4bba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef300a5ac229b179c2bb6865b8f48e3d = $(`<div id="html_ef300a5ac229b179c2bb6865b8f48e3d" style="width: 100.0%; height: 100.0%;"><b>Peter Hall Building UniMelb</b><br>Depot</div>`)[0];
+                popup_7a72f75a7f6d0b187032cbfe693a4bba.setContent(html_ef300a5ac229b179c2bb6865b8f48e3d);
+            
+        
+
+        marker_5c8eb5b3e66b2533b66d0f7ff800d3a4.bindPopup(popup_7a72f75a7f6d0b187032cbfe693a4bba)
+        ;
+
+        
+    
+    
+            marker_5c8eb5b3e66b2533b66d0f7ff800d3a4.bindTooltip(
+                `<div>
+                     Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c8eb5b3e66b2533b66d0f7ff800d3a4.setIcon(icon_ed2adb4267b1bf111d3a5c1226fbc51b);
+            
+    
+            var circle_marker_28fc3e6668837651da2ab019c4408561 = L.circleMarker(
+                [-37.8023383, 144.9851717],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_5310ff5cb2b1ace449a7f0c2b86c2866 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6464f213e0ee0e42151b123249ab2eeb = $(`<div id="html_6464f213e0ee0e42151b123249ab2eeb" style="width: 100.0%; height: 100.0%;">             <b>Proud Mary Coffee</b><br>             Assigned van: van_5<br>             Total weight: 20.48 kg<br>             Total margin: $58.20<br>             Product types: 7.0             </div>`)[0];
+                popup_5310ff5cb2b1ace449a7f0c2b86c2866.setContent(html_6464f213e0ee0e42151b123249ab2eeb);
+            
+        
+
+        circle_marker_28fc3e6668837651da2ab019c4408561.bindPopup(popup_5310ff5cb2b1ace449a7f0c2b86c2866)
+        ;
+
+        
+    
+    
+            circle_marker_28fc3e6668837651da2ab019c4408561.bindTooltip(
+                `<div>
+                     Proud Mary Coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98d72e44bce5253cb692516c263c330d = L.circleMarker(
+                [-37.8146934, 144.9582383],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_64bd3caac207748db2aa42b6454ef670 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_acf448b944bf395f33f63fb128b68724 = $(`<div id="html_acf448b944bf395f33f63fb128b68724" style="width: 100.0%; height: 100.0%;">             <b>Patricia Coffee Brewers</b><br>             Assigned van: van_3<br>             Total weight: 88.15 kg<br>             Total margin: $221.20<br>             Product types: 7.0             </div>`)[0];
+                popup_64bd3caac207748db2aa42b6454ef670.setContent(html_acf448b944bf395f33f63fb128b68724);
+            
+        
+
+        circle_marker_98d72e44bce5253cb692516c263c330d.bindPopup(popup_64bd3caac207748db2aa42b6454ef670)
+        ;
+
+        
+    
+    
+            circle_marker_98d72e44bce5253cb692516c263c330d.bindTooltip(
+                `<div>
+                     Patricia Coffee Brewers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_784a570cb1491ffd1c69911a9b9931d5 = L.circleMarker(
+                [-37.8029711, 144.9590027],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_c38bdb3c0068c2474774605eb49feb67 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0eefa468dd919539604e89f21a964051 = $(`<div id="html_0eefa468dd919539604e89f21a964051" style="width: 100.0%; height: 100.0%;">             <b>Seven Seeds Coffee Roasters</b><br>             Assigned van: van_2<br>             Total weight: 30.70 kg<br>             Total margin: $93.00<br>             Product types: 7.0             </div>`)[0];
+                popup_c38bdb3c0068c2474774605eb49feb67.setContent(html_0eefa468dd919539604e89f21a964051);
+            
+        
+
+        circle_marker_784a570cb1491ffd1c69911a9b9931d5.bindPopup(popup_c38bdb3c0068c2474774605eb49feb67)
+        ;
+
+        
+    
+    
+            circle_marker_784a570cb1491ffd1c69911a9b9931d5.bindTooltip(
+                `<div>
+                     Seven Seeds Coffee Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4e38f9bd5d9820229dcb078a11b2e51f = L.circleMarker(
+                [-37.7948113, 144.9781341],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_9cf70e83bbb09542b81566734e45e42d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6d9beeb991a6573e6d4b968ccdf4c8b7 = $(`<div id="html_6d9beeb991a6573e6d4b968ccdf4c8b7" style="width: 100.0%; height: 100.0%;">             <b>Industry Beans Fitzroy</b><br>             Assigned van: van_2<br>             Total weight: 39.95 kg<br>             Total margin: $111.80<br>             Product types: 7.0             </div>`)[0];
+                popup_9cf70e83bbb09542b81566734e45e42d.setContent(html_6d9beeb991a6573e6d4b968ccdf4c8b7);
+            
+        
+
+        circle_marker_4e38f9bd5d9820229dcb078a11b2e51f.bindPopup(popup_9cf70e83bbb09542b81566734e45e42d)
+        ;
+
+        
+    
+    
+            circle_marker_4e38f9bd5d9820229dcb078a11b2e51f.bindTooltip(
+                `<div>
+                     Industry Beans Fitzroy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c220116ea44cc00d131e46908c804a8 = L.circleMarker(
+                [-37.776348, 144.972123],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_bd6e4ea438673cd02e0dd7c7acde4b95 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c917a4b565628dbaf15ad6523a698841 = $(`<div id="html_c917a4b565628dbaf15ad6523a698841" style="width: 100.0%; height: 100.0%;">             <b>Market Lane Coffee HQ</b><br>             Assigned van: van_2<br>             Total weight: 23.56 kg<br>             Total margin: $61.90<br>             Product types: 6.0             </div>`)[0];
+                popup_bd6e4ea438673cd02e0dd7c7acde4b95.setContent(html_c917a4b565628dbaf15ad6523a698841);
+            
+        
+
+        circle_marker_6c220116ea44cc00d131e46908c804a8.bindPopup(popup_bd6e4ea438673cd02e0dd7c7acde4b95)
+        ;
+
+        
+    
+    
+            circle_marker_6c220116ea44cc00d131e46908c804a8.bindTooltip(
+                `<div>
+                     Market Lane Coffee HQ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_94747810548862557379432d2403f822 = L.circleMarker(
+                [-37.8312475, 144.960354],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_836f49ae32fcd62d817e99e6d613dab7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_22025286112334ba60bf3a139e88d817 = $(`<div id="html_22025286112334ba60bf3a139e88d817" style="width: 100.0%; height: 100.0%;">             <b>ST. ALi Coffee Roasters</b><br>             Assigned van: van_5<br>             Total weight: 27.67 kg<br>             Total margin: $69.00<br>             Product types: 7.0             </div>`)[0];
+                popup_836f49ae32fcd62d817e99e6d613dab7.setContent(html_22025286112334ba60bf3a139e88d817);
+            
+        
+
+        circle_marker_94747810548862557379432d2403f822.bindPopup(popup_836f49ae32fcd62d817e99e6d613dab7)
+        ;
+
+        
+    
+    
+            circle_marker_94747810548862557379432d2403f822.bindTooltip(
+                `<div>
+                     ST. ALi Coffee Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24630396117397c97ab1744b98ec7081 = L.circleMarker(
+                [-37.774643, 144.962468],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_4c612e4bc720dc440609e3af48744ae4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8702cd4aae54ef548cefb343a0cb3166 = $(`<div id="html_8702cd4aae54ef548cefb343a0cb3166" style="width: 100.0%; height: 100.0%;">             <b>Code Black Coffee Brunswick</b><br>             Assigned van: van_2<br>             Total weight: 22.54 kg<br>             Total margin: $59.90<br>             Product types: 7.0             </div>`)[0];
+                popup_4c612e4bc720dc440609e3af48744ae4.setContent(html_8702cd4aae54ef548cefb343a0cb3166);
+            
+        
+
+        circle_marker_24630396117397c97ab1744b98ec7081.bindPopup(popup_4c612e4bc720dc440609e3af48744ae4)
+        ;
+
+        
+    
+    
+            circle_marker_24630396117397c97ab1744b98ec7081.bindTooltip(
+                `<div>
+                     Code Black Coffee Brunswick
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a1e798ceac42486fb8646427ec147c5d = L.circleMarker(
+                [-37.8226075, 145.0342781],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_3028b8bf62dedc4b61985db3566f6363 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ba5bcb4dab3523243f11476ce906501d = $(`<div id="html_ba5bcb4dab3523243f11476ce906501d" style="width: 100.0%; height: 100.0%;">             <b>Axil Coffee Roasters</b><br>             Assigned van: van_5<br>             Total weight: 83.14 kg<br>             Total margin: $172.60<br>             Product types: 7.0             </div>`)[0];
+                popup_3028b8bf62dedc4b61985db3566f6363.setContent(html_ba5bcb4dab3523243f11476ce906501d);
+            
+        
+
+        circle_marker_a1e798ceac42486fb8646427ec147c5d.bindPopup(popup_3028b8bf62dedc4b61985db3566f6363)
+        ;
+
+        
+    
+    
+            circle_marker_a1e798ceac42486fb8646427ec147c5d.bindTooltip(
+                `<div>
+                     Axil Coffee Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_30da3210db6243d6147d06ff6c231c0e = L.circleMarker(
+                [-37.816791, 144.966162],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_961669f2d146597ca0227e21182b6e18 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_723f468fd5312b4ccb6344b0d40b5e67 = $(`<div id="html_723f468fd5312b4ccb6344b0d40b5e67" style="width: 100.0%; height: 100.0%;">             <b>Dukes Coffee Roasters</b><br>             Assigned van: van_3<br>             Total weight: 37.91 kg<br>             Total margin: $91.00<br>             Product types: 6.0             </div>`)[0];
+                popup_961669f2d146597ca0227e21182b6e18.setContent(html_723f468fd5312b4ccb6344b0d40b5e67);
+            
+        
+
+        circle_marker_30da3210db6243d6147d06ff6c231c0e.bindPopup(popup_961669f2d146597ca0227e21182b6e18)
+        ;
+
+        
+    
+    
+            circle_marker_30da3210db6243d6147d06ff6c231c0e.bindTooltip(
+                `<div>
+                     Dukes Coffee Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1355e24e16660c6d9119c99e29d6479a = L.circleMarker(
+                [-37.7947678, 144.9342535],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_27af1578f3a2675ae42f526e91c58043 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3f3a1403747982f0515e7ed008d19a44 = $(`<div id="html_3f3a1403747982f0515e7ed008d19a44" style="width: 100.0%; height: 100.0%;">             <b>Rumble Coffee Roasters</b><br>             Assigned van: van_5<br>             Total weight: 36.88 kg<br>             Total margin: $96.80<br>             Product types: 7.0             </div>`)[0];
+                popup_27af1578f3a2675ae42f526e91c58043.setContent(html_3f3a1403747982f0515e7ed008d19a44);
+            
+        
+
+        circle_marker_1355e24e16660c6d9119c99e29d6479a.bindPopup(popup_27af1578f3a2675ae42f526e91c58043)
+        ;
+
+        
+    
+    
+            circle_marker_1355e24e16660c6d9119c99e29d6479a.bindTooltip(
+                `<div>
+                     Rumble Coffee Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6955481cff7aec90f78ff6c1843d9301 = L.circleMarker(
+                [-37.7763047, 144.9612147],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_b792068d8977b0f5173d6ae599212316 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e2dd6d762429824c24114aa7a5254e5a = $(`<div id="html_e2dd6d762429824c24114aa7a5254e5a" style="width: 100.0%; height: 100.0%;">             <b>Wide Open Road</b><br>             Assigned van: van_2<br>             Total weight: 24.63 kg<br>             Total margin: $53.20<br>             Product types: 6.0             </div>`)[0];
+                popup_b792068d8977b0f5173d6ae599212316.setContent(html_e2dd6d762429824c24114aa7a5254e5a);
+            
+        
+
+        circle_marker_6955481cff7aec90f78ff6c1843d9301.bindPopup(popup_b792068d8977b0f5173d6ae599212316)
+        ;
+
+        
+    
+    
+            circle_marker_6955481cff7aec90f78ff6c1843d9301.bindTooltip(
+                `<div>
+                     Wide Open Road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_06b1fee3437df14c69a40f517f0cae34 = L.circleMarker(
+                [-37.8028093, 144.9870052],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_80ae852311d8a10a8fa74059e9928bac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ae0b9d268d197e8e5a9718bd05e72910 = $(`<div id="html_ae0b9d268d197e8e5a9718bd05e72910" style="width: 100.0%; height: 100.0%;">             <b>Aunty Peg's</b><br>             Assigned van: van_5<br>             Total weight: 62.48 kg<br>             Total margin: $167.90<br>             Product types: 7.0             </div>`)[0];
+                popup_80ae852311d8a10a8fa74059e9928bac.setContent(html_ae0b9d268d197e8e5a9718bd05e72910);
+            
+        
+
+        circle_marker_06b1fee3437df14c69a40f517f0cae34.bindPopup(popup_80ae852311d8a10a8fa74059e9928bac)
+        ;
+
+        
+    
+    
+            circle_marker_06b1fee3437df14c69a40f517f0cae34.bindTooltip(
+                `<div>
+                     Aunty Peg's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b61c28402b095eaf4663408b99ae24f3 = L.circleMarker(
+                [-37.813541, 144.9620988],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_94fbe2a8a00ae3f5454ef3e356f54a10 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9b33e88cbd298be8404a4e8ea01e8628 = $(`<div id="html_9b33e88cbd298be8404a4e8ea01e8628" style="width: 100.0%; height: 100.0%;">             <b>Brother Baba Budan</b><br>             Assigned van: van_3<br>             Total weight: 60.46 kg<br>             Total margin: $158.10<br>             Product types: 7.0             </div>`)[0];
+                popup_94fbe2a8a00ae3f5454ef3e356f54a10.setContent(html_9b33e88cbd298be8404a4e8ea01e8628);
+            
+        
+
+        circle_marker_b61c28402b095eaf4663408b99ae24f3.bindPopup(popup_94fbe2a8a00ae3f5454ef3e356f54a10)
+        ;
+
+        
+    
+    
+            circle_marker_b61c28402b095eaf4663408b99ae24f3.bindTooltip(
+                `<div>
+                     Brother Baba Budan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6f1bdabda747cd49c8404ad69efad3ac = L.circleMarker(
+                [-37.7959659, 144.9799313],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_1476663daa607232a048a2c09b01f129 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b66e35219ae02b941e438a56bbe386d4 = $(`<div id="html_b66e35219ae02b941e438a56bbe386d4" style="width: 100.0%; height: 100.0%;">             <b>Lune Croissanterie Fitzroy</b><br>             Assigned van: van_2<br>             Total weight: 25.65 kg<br>             Total margin: $57.20<br>             Product types: 6.0             </div>`)[0];
+                popup_1476663daa607232a048a2c09b01f129.setContent(html_b66e35219ae02b941e438a56bbe386d4);
+            
+        
+
+        circle_marker_6f1bdabda747cd49c8404ad69efad3ac.bindPopup(popup_1476663daa607232a048a2c09b01f129)
+        ;
+
+        
+    
+    
+            circle_marker_6f1bdabda747cd49c8404ad69efad3ac.bindTooltip(
+                `<div>
+                     Lune Croissanterie Fitzroy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2bac85a5d6e38f977f33478c4b52c867 = L.circleMarker(
+                [-37.8043369, 144.9545001],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_3b471dadaf1989585fa71fcc22a48c20 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4a758022e703af9551f5e447a06bf24b = $(`<div id="html_4a758022e703af9551f5e447a06bf24b" style="width: 100.0%; height: 100.0%;">             <b>Small Batch Roasting Co.</b><br>             Assigned van: van_2<br>             Total weight: 24.65 kg<br>             Total margin: $45.20<br>             Product types: 5.0             </div>`)[0];
+                popup_3b471dadaf1989585fa71fcc22a48c20.setContent(html_4a758022e703af9551f5e447a06bf24b);
+            
+        
+
+        circle_marker_2bac85a5d6e38f977f33478c4b52c867.bindPopup(popup_3b471dadaf1989585fa71fcc22a48c20)
+        ;
+
+        
+    
+    
+            circle_marker_2bac85a5d6e38f977f33478c4b52c867.bindTooltip(
+                `<div>
+                     Small Batch Roasting Co.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c8ff7819efd21ed31cb4e67ee5373f7 = L.circleMarker(
+                [-37.7641144, 144.9732824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_a96769dcd22f8c1a2b3f6fd0df6f7620 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f4204cf13a24fcf09dbead3e4d5b355a = $(`<div id="html_f4204cf13a24fcf09dbead3e4d5b355a" style="width: 100.0%; height: 100.0%;">             <b>Padre Coffee Brunswick East</b><br>             Assigned van: van_2<br>             Total weight: 18.46 kg<br>             Total margin: $46.40<br>             Product types: 6.0             </div>`)[0];
+                popup_a96769dcd22f8c1a2b3f6fd0df6f7620.setContent(html_f4204cf13a24fcf09dbead3e4d5b355a);
+            
+        
+
+        circle_marker_7c8ff7819efd21ed31cb4e67ee5373f7.bindPopup(popup_a96769dcd22f8c1a2b3f6fd0df6f7620)
+        ;
+
+        
+    
+    
+            circle_marker_7c8ff7819efd21ed31cb4e67ee5373f7.bindTooltip(
+                `<div>
+                     Padre Coffee Brunswick East
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_daf0a08bdf422d683017654499e97b29 = L.circleMarker(
+                [-37.799384, 144.9781281],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_ea921da3efbe485b8880c9b92d268c77 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a29d00fd30f6a9fb20a771232e46e36a = $(`<div id="html_a29d00fd30f6a9fb20a771232e46e36a" style="width: 100.0%; height: 100.0%;">             <b>Jasper Coffee Fitzroy</b><br>             Assigned van: van_5<br>             Total weight: 16.42 kg<br>             Total margin: $32.80<br>             Product types: 5.0             </div>`)[0];
+                popup_ea921da3efbe485b8880c9b92d268c77.setContent(html_a29d00fd30f6a9fb20a771232e46e36a);
+            
+        
+
+        circle_marker_daf0a08bdf422d683017654499e97b29.bindPopup(popup_ea921da3efbe485b8880c9b92d268c77)
+        ;
+
+        
+    
+    
+            circle_marker_daf0a08bdf422d683017654499e97b29.bindTooltip(
+                `<div>
+                     Jasper Coffee Fitzroy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_842ee3010cf784205fea2457d616a59b = L.circleMarker(
+                [-37.7981641, 144.9858767],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_a3aa489cfe869859370e3a34cfd10559 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_35efc1d8bc6f4096b4699067f7a2bae5 = $(`<div id="html_35efc1d8bc6f4096b4699067f7a2bae5" style="width: 100.0%; height: 100.0%;">             <b>Everyday Coffee</b><br>             Assigned van: van_5<br>             Total weight: 42.05 kg<br>             Total margin: $97.60<br>             Product types: 6.0             </div>`)[0];
+                popup_a3aa489cfe869859370e3a34cfd10559.setContent(html_35efc1d8bc6f4096b4699067f7a2bae5);
+            
+        
+
+        circle_marker_842ee3010cf784205fea2457d616a59b.bindPopup(popup_a3aa489cfe869859370e3a34cfd10559)
+        ;
+
+        
+    
+    
+            circle_marker_842ee3010cf784205fea2457d616a59b.bindTooltip(
+                `<div>
+                     Everyday Coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08636f662d471dca988e7760ad64705f = L.circleMarker(
+                [-37.8394531, 144.9963319],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_9985d216411d2c8e44587ebba4fc8691 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a4f2280bf3e3217519ecf6054efc6c1d = $(`<div id="html_a4f2280bf3e3217519ecf6054efc6c1d" style="width: 100.0%; height: 100.0%;">             <b>MAKER Coffee South Yarra</b><br>             Assigned van: van_5<br>             Total weight: 33.85 kg<br>             Total margin: $82.00<br>             Product types: 6.0             </div>`)[0];
+                popup_9985d216411d2c8e44587ebba4fc8691.setContent(html_a4f2280bf3e3217519ecf6054efc6c1d);
+            
+        
+
+        circle_marker_08636f662d471dca988e7760ad64705f.bindPopup(popup_9985d216411d2c8e44587ebba4fc8691)
+        ;
+
+        
+    
+    
+            circle_marker_08636f662d471dca988e7760ad64705f.bindTooltip(
+                `<div>
+                     MAKER Coffee South Yarra
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7c4e790a81f1111ccbdcae32587b61a = L.circleMarker(
+                [-37.8269479, 144.9929394],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_9d7d4cb605de0442b38ed400db69c831 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b5a0f01cba2d5a51481e5f61362b008a = $(`<div id="html_b5a0f01cba2d5a51481e5f61362b008a" style="width: 100.0%; height: 100.0%;">             <b>Square Lane Coffee</b><br>             Assigned van: van_5<br>             Total weight: 24.59 kg<br>             Total margin: $64.30<br>             Product types: 7.0             </div>`)[0];
+                popup_9d7d4cb605de0442b38ed400db69c831.setContent(html_b5a0f01cba2d5a51481e5f61362b008a);
+            
+        
+
+        circle_marker_c7c4e790a81f1111ccbdcae32587b61a.bindPopup(popup_9d7d4cb605de0442b38ed400db69c831)
+        ;
+
+        
+    
+    
+            circle_marker_c7c4e790a81f1111ccbdcae32587b61a.bindTooltip(
+                `<div>
+                     Square Lane Coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6607bfe8b6ca09d305560aad0a02bc0a = L.circleMarker(
+                [-37.775525, 144.9601403],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_1af6604c7112418a61f34087ec2fb6c1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_be7f632128dd543c03cb0b8f34d37beb = $(`<div id="html_be7f632128dd543c03cb0b8f34d37beb" style="width: 100.0%; height: 100.0%;">             <b>Disciple Roasters</b><br>             Assigned van: van_2<br>             Total weight: 34.88 kg<br>             Total margin: $80.30<br>             Product types: 6.0             </div>`)[0];
+                popup_1af6604c7112418a61f34087ec2fb6c1.setContent(html_be7f632128dd543c03cb0b8f34d37beb);
+            
+        
+
+        circle_marker_6607bfe8b6ca09d305560aad0a02bc0a.bindPopup(popup_1af6604c7112418a61f34087ec2fb6c1)
+        ;
+
+        
+    
+    
+            circle_marker_6607bfe8b6ca09d305560aad0a02bc0a.bindTooltip(
+                `<div>
+                     Disciple Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_292eaa91ca543adc397963a0cee1b9fa = L.circleMarker(
+                [-37.8091416, 145.006767],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_e0eeb934a730de91ed86b3cdb1eb670d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_92b47d9997e5b81ea2b13e5e687df5d3 = $(`<div id="html_92b47d9997e5b81ea2b13e5e687df5d3" style="width: 100.0%; height: 100.0%;">             <b>Coffee Supreme</b><br>             Assigned van: van_5<br>             Total weight: 19.48 kg<br>             Total margin: $45.50<br>             Product types: 5.0             </div>`)[0];
+                popup_e0eeb934a730de91ed86b3cdb1eb670d.setContent(html_92b47d9997e5b81ea2b13e5e687df5d3);
+            
+        
+
+        circle_marker_292eaa91ca543adc397963a0cee1b9fa.bindPopup(popup_e0eeb934a730de91ed86b3cdb1eb670d)
+        ;
+
+        
+    
+    
+            circle_marker_292eaa91ca543adc397963a0cee1b9fa.bindTooltip(
+                `<div>
+                     Coffee Supreme
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb07c0a33a031907850d552d4f3cd93f = L.circleMarker(
+                [-37.845757, 144.993288],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_fa5091694bcdb63b614d1b1b1f7c454e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a1b534c12e161a963cb7955f46ef90b3 = $(`<div id="html_a1b534c12e161a963cb7955f46ef90b3" style="width: 100.0%; height: 100.0%;">             <b>Market Lane Prahran Market</b><br>             Assigned van: van_5<br>             Total weight: 22.56 kg<br>             Total margin: $51.60<br>             Product types: 6.0             </div>`)[0];
+                popup_fa5091694bcdb63b614d1b1b1f7c454e.setContent(html_a1b534c12e161a963cb7955f46ef90b3);
+            
+        
+
+        circle_marker_fb07c0a33a031907850d552d4f3cd93f.bindPopup(popup_fa5091694bcdb63b614d1b1b1f7c454e)
+        ;
+
+        
+    
+    
+            circle_marker_fb07c0a33a031907850d552d4f3cd93f.bindTooltip(
+                `<div>
+                     Market Lane Prahran Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_996ccf4c241301215d7b55ff6d438c2a = L.circleMarker(
+                [-37.8169555, 145.0131324],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_37e91e4195916a5fda0e6ed081c4576f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b644fa03fca75f38bc529df95fec730f = $(`<div id="html_b644fa03fca75f38bc529df95fec730f" style="width: 100.0%; height: 100.0%;">             <b>Veneziano Coffee Richmond</b><br>             Assigned van: van_5<br>             Total weight: 24.58 kg<br>             Total margin: $63.10<br>             Product types: 6.0             </div>`)[0];
+                popup_37e91e4195916a5fda0e6ed081c4576f.setContent(html_b644fa03fca75f38bc529df95fec730f);
+            
+        
+
+        circle_marker_996ccf4c241301215d7b55ff6d438c2a.bindPopup(popup_37e91e4195916a5fda0e6ed081c4576f)
+        ;
+
+        
+    
+    
+            circle_marker_996ccf4c241301215d7b55ff6d438c2a.bindTooltip(
+                `<div>
+                     Veneziano Coffee Richmond
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5506fcaa025cfa0a2fe6723afbc0f1ca = L.circleMarker(
+                [-37.8108846, 144.9455841],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_f915410e0cf68be6d4d87ffe4bc6fe2e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_32d06b5c06702725e16386e8f9ba8559 = $(`<div id="html_32d06b5c06702725e16386e8f9ba8559" style="width: 100.0%; height: 100.0%;">             <b>Five Senses Coffee</b><br>             Assigned van: van_5<br>             Total weight: 37.93 kg<br>             Total margin: $90.20<br>             Product types: 7.0             </div>`)[0];
+                popup_f915410e0cf68be6d4d87ffe4bc6fe2e.setContent(html_32d06b5c06702725e16386e8f9ba8559);
+            
+        
+
+        circle_marker_5506fcaa025cfa0a2fe6723afbc0f1ca.bindPopup(popup_f915410e0cf68be6d4d87ffe4bc6fe2e)
+        ;
+
+        
+    
+    
+            circle_marker_5506fcaa025cfa0a2fe6723afbc0f1ca.bindTooltip(
+                `<div>
+                     Five Senses Coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_302e3b35a274be1d4781285ad83f65c0 = L.circleMarker(
+                [-37.7847929, 144.9823376],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_fccb6f2a03fbcf8fd28971ac0a771a6d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_68dc0a0bf99d71572b873a70f148ecd3 = $(`<div id="html_68dc0a0bf99d71572b873a70f148ecd3" style="width: 100.0%; height: 100.0%;">             <b>Standing Room Fitzroy North</b><br>             Assigned van: van_2<br>             Total weight: 32.81 kg<br>             Total margin: $78.00<br>             Product types: 6.0             </div>`)[0];
+                popup_fccb6f2a03fbcf8fd28971ac0a771a6d.setContent(html_68dc0a0bf99d71572b873a70f148ecd3);
+            
+        
+
+        circle_marker_302e3b35a274be1d4781285ad83f65c0.bindPopup(popup_fccb6f2a03fbcf8fd28971ac0a771a6d)
+        ;
+
+        
+    
+    
+            circle_marker_302e3b35a274be1d4781285ad83f65c0.bindTooltip(
+                `<div>
+                     Standing Room Fitzroy North
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ddc869d7eae9be5caeb6cfafd1c42aa7 = L.circleMarker(
+                [-37.761889, 144.961811],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_5491898a717aae0914393734cc6e3259 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c4c42df6428e179f6c446bd27660cc84 = $(`<div id="html_c4c42df6428e179f6c446bd27660cc84" style="width: 100.0%; height: 100.0%;">             <b>Bench Coffee Co. Roastery</b><br>             Assigned van: van_2<br>             Total weight: 21.52 kg<br>             Total margin: $58.00<br>             Product types: 7.0             </div>`)[0];
+                popup_5491898a717aae0914393734cc6e3259.setContent(html_c4c42df6428e179f6c446bd27660cc84);
+            
+        
+
+        circle_marker_ddc869d7eae9be5caeb6cfafd1c42aa7.bindPopup(popup_5491898a717aae0914393734cc6e3259)
+        ;
+
+        
+    
+    
+            circle_marker_ddc869d7eae9be5caeb6cfafd1c42aa7.bindTooltip(
+                `<div>
+                     Bench Coffee Co. Roastery
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31472558fdf576066350e58211aaa486 = L.circleMarker(
+                [-37.8054501, 144.9542036],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_114e7ca4408cec3465735b5c4b58355b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_346ea02b38648123fb6938c578360f01 = $(`<div id="html_346ea02b38648123fb6938c578360f01" style="width: 100.0%; height: 100.0%;">             <b>Path Melbourne</b><br>             Assigned van: van_2<br>             Total weight: 42.08 kg<br>             Total margin: $91.50<br>             Product types: 7.0             </div>`)[0];
+                popup_114e7ca4408cec3465735b5c4b58355b.setContent(html_346ea02b38648123fb6938c578360f01);
+            
+        
+
+        circle_marker_31472558fdf576066350e58211aaa486.bindPopup(popup_114e7ca4408cec3465735b5c4b58355b)
+        ;
+
+        
+    
+    
+            circle_marker_31472558fdf576066350e58211aaa486.bindTooltip(
+                `<div>
+                     Path Melbourne
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_89f9aadac013426eb8a7b61433c214a0 = L.circleMarker(
+                [-37.810993, 144.964066],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_106c958e89f20c4d3bc9430a569d3242 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2855f2727459b9d9fbe2a9c31b57a056 = $(`<div id="html_2855f2727459b9d9fbe2a9c31b57a056" style="width: 100.0%; height: 100.0%;">             <b>Little Rogue</b><br>             Assigned van: van_3<br>             Total weight: 33.80 kg<br>             Total margin: $90.80<br>             Product types: 6.0             </div>`)[0];
+                popup_106c958e89f20c4d3bc9430a569d3242.setContent(html_2855f2727459b9d9fbe2a9c31b57a056);
+            
+        
+
+        circle_marker_89f9aadac013426eb8a7b61433c214a0.bindPopup(popup_106c958e89f20c4d3bc9430a569d3242)
+        ;
+
+        
+    
+    
+            circle_marker_89f9aadac013426eb8a7b61433c214a0.bindTooltip(
+                `<div>
+                     Little Rogue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9966374f0fbb24329b36cae28c0938e2 = L.circleMarker(
+                [-37.8158579, 144.9720281],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_6df0bd6e365b36c5caadac44bd0b3c5e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d230be930887d61ee6d40469b30be6ed = $(`<div id="html_d230be930887d61ee6d40469b30be6ed" style="width: 100.0%; height: 100.0%;">             <b>Vacation Coffee CBD</b><br>             Assigned van: van_3<br>             Total weight: 23.61 kg<br>             Total margin: $45.40<br>             Product types: 5.0             </div>`)[0];
+                popup_6df0bd6e365b36c5caadac44bd0b3c5e.setContent(html_d230be930887d61ee6d40469b30be6ed);
+            
+        
+
+        circle_marker_9966374f0fbb24329b36cae28c0938e2.bindPopup(popup_6df0bd6e365b36c5caadac44bd0b3c5e)
+        ;
+
+        
+    
+    
+            circle_marker_9966374f0fbb24329b36cae28c0938e2.bindTooltip(
+                `<div>
+                     Vacation Coffee CBD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d4b3622572f3987de26a55908dc67aa8 = L.circleMarker(
+                [-37.8014, 144.9672],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_5b0c3ad98fa84d422fd709bec12c9cb6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4bfa92016c0f9fc09156ad405f528f5f = $(`<div id="html_4bfa92016c0f9fc09156ad405f528f5f" style="width: 100.0%; height: 100.0%;">             <b>Market Lane Carlton</b><br>             Assigned van: van_3<br>             Total weight: 37.92 kg<br>             Total margin: $96.40<br>             Product types: 6.0             </div>`)[0];
+                popup_5b0c3ad98fa84d422fd709bec12c9cb6.setContent(html_4bfa92016c0f9fc09156ad405f528f5f);
+            
+        
+
+        circle_marker_d4b3622572f3987de26a55908dc67aa8.bindPopup(popup_5b0c3ad98fa84d422fd709bec12c9cb6)
+        ;
+
+        
+    
+    
+            circle_marker_d4b3622572f3987de26a55908dc67aa8.bindTooltip(
+                `<div>
+                     Market Lane Carlton
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_32540a412fdf630466f7243806730d2c = L.circleMarker(
+                [-37.8109, 144.9668],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_57c623751bc2f9591d96acaa1fb144f7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2b356ecf55c8876c43b3d0bf407c68ae = $(`<div id="html_2b356ecf55c8876c43b3d0bf407c68ae" style="width: 100.0%; height: 100.0%;">             <b>Traveller Coffee</b><br>             Assigned van: van_3<br>             Total weight: 24.60 kg<br>             Total margin: $63.10<br>             Product types: 7.0             </div>`)[0];
+                popup_57c623751bc2f9591d96acaa1fb144f7.setContent(html_2b356ecf55c8876c43b3d0bf407c68ae);
+            
+        
+
+        circle_marker_32540a412fdf630466f7243806730d2c.bindPopup(popup_57c623751bc2f9591d96acaa1fb144f7)
+        ;
+
+        
+    
+    
+            circle_marker_32540a412fdf630466f7243806730d2c.bindTooltip(
+                `<div>
+                     Traveller Coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_535db40c36eb3a323751faf028b1a60d = L.circleMarker(
+                [-37.7775, 144.9722],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_7701ac66dff7845839a2fc6677185c88 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1fd809f14d9ac948e10f67be36cbf740 = $(`<div id="html_1fd809f14d9ac948e10f67be36cbf740" style="width: 100.0%; height: 100.0%;">             <b>Core Roasters</b><br>             Assigned van: van_2<br>             Total weight: 25.64 kg<br>             Total margin: $58.80<br>             Product types: 6.0             </div>`)[0];
+                popup_7701ac66dff7845839a2fc6677185c88.setContent(html_1fd809f14d9ac948e10f67be36cbf740);
+            
+        
+
+        circle_marker_535db40c36eb3a323751faf028b1a60d.bindPopup(popup_7701ac66dff7845839a2fc6677185c88)
+        ;
+
+        
+    
+    
+            circle_marker_535db40c36eb3a323751faf028b1a60d.bindTooltip(
+                `<div>
+                     Core Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4639af959583cf86ca10f87e7b58665e = L.circleMarker(
+                [-37.8175, 144.964],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_691dd1108c476b63e78062d6176e2e8c);
+        
+    
+        var popup_38b7c9a0345214f0afd30ddb1056c442 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c8b85fb0bd11ea64bfa2684b1cb5845f = $(`<div id="html_c8b85fb0bd11ea64bfa2684b1cb5845f" style="width: 100.0%; height: 100.0%;">             <b>Project Zero</b><br>             Assigned van: van_3<br>             Total weight: 82.10 kg<br>             Total margin: $173.70<br>             Product types: 7.0             </div>`)[0];
+                popup_38b7c9a0345214f0afd30ddb1056c442.setContent(html_c8b85fb0bd11ea64bfa2684b1cb5845f);
+            
+        
+
+        circle_marker_4639af959583cf86ca10f87e7b58665e.bindPopup(popup_38b7c9a0345214f0afd30ddb1056c442)
+        ;
+
+        
+    
+    
+            circle_marker_4639af959583cf86ca10f87e7b58665e.bindTooltip(
+                `<div>
+                     Project Zero
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
