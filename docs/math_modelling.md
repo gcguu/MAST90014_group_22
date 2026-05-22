@@ -354,8 +354,24 @@ Each van can:
 The flow balance equation ensures that every used route returns to the depot.
 
 ---
+# Subtour Elimination Strategies
 
-# 7. MTZ Subtour Elimination Constraints
+The core profit-maximising multi-product vehicle routing model is the same for both implementations. The objective function, demand satisfaction constraints, capacity constraints, flow conservation constraints, route duration constraints, and milk perishability constraints remain unchanged.
+
+The only modelling difference is the subtour elimination strategy. We compare two alternatives: MTZ and DFJ.
+
+---
+
+## 7A. MTZ Subtour Elimination
+
+The MTZ formulation introduces auxiliary ordering variables:
+
+$$
+u_{ik} \ge 0,
+\quad \forall i \in C,\ k \in K
+$$
+
+The subtour elimination constraints are:
 
 $$
 u_{ik}
@@ -379,20 +395,49 @@ u_{ik}
 \forall i\in C,\ k\in K
 $$
 
-### Explanation
+These constraints force the visited cafes of each van to follow a consistent ordering, preventing disconnected cycles that do not include the depot.
 
-These constraints eliminate disconnected cycles (subtours).
+---
 
-Without them, the model could create invalid routes such as:
+## 7B. DFJ Subtour Elimination
+
+As an alternative, we implement the Dantzig-Fulkerson-Johnson subtour elimination constraints:
 
 $$
-\text{Cafe A} \rightarrow \text{Cafe B} \rightarrow \text{Cafe A}
+\sum_{i\in S}\sum_{j\in S,\ j\neq i}
+x_{ijk}
+\le
+|S|-1,
+\quad
+\forall S\subset C,\ 2\le |S|\le |C|-1,\ k\in K
 $$
 
-without connecting to the depot.
+These constraints prevent any subset of cafes from forming a closed cycle disconnected from the depot.
 
-The MTZ formulation enforces a consistent visit order along each route.
+Because the number of possible subsets \(S\) is exponential, these constraints are not added explicitly at the start of the model. Instead, they are added dynamically using Gurobi lazy constraints.
 
+Whenever Gurobi finds an integer feasible solution, the callback checks each van route for disconnected subtours. If a subtour \(S\) is detected, the violated DFJ constraint is added:
+
+$$
+\sum_{i\in S}\sum_{j\in S,\ j\neq i}
+x_{ijk}
+\le
+|S|-1
+$$
+
+---
+
+## Comparison of MTZ and DFJ
+
+| Component | MTZ Formulation | DFJ Lazy Constraint Formulation |
+|---|---|---|
+| Extra variables | Requires \(u_{ik}\) ordering variables | No ordering variables |
+| Subtour constraints | Polynomial number | Exponential number in theory |
+| Implementation | Added directly to model | Added dynamically through callback |
+| Strength | Usually weaker LP relaxation | Usually stronger subtour elimination |
+| Practical use | Simple baseline model | More advanced branch-and-cut approach |
+
+In this project, the MTZ formulation is used as the baseline implementation, while the DFJ formulation is used as a stronger alternative to test whether dynamic subtour elimination improves solution quality and computational performance.
 ---
 
 # 8. Route Duration Definition
