@@ -1,0 +1,2518 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_18990d63e562a9425be011c3e7e5fc9f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-textpath@1.2.3/leaflet.textpath.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_18990d63e562a9425be011c3e7e5fc9f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_18990d63e562a9425be011c3e7e5fc9f = L.map(
+                "map_18990d63e562a9425be011c3e7e5fc9f",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 1,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7cc322b69786e21259e17f3f94a2d7a3 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7cc322b69786e21259e17f3f94a2d7a3.addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            map_18990d63e562a9425be011c3e7e5fc9f.fitBounds(
+                [[-37.845757, 144.9342535], [-37.761889, 145.0342781]],
+                {}
+            );
+        
+    
+            var marker_845d248ed76365a3fc6d970b9eaebb18 = L.marker(
+                [-37.7982158, 144.9636857],
+                {
+}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            var icon_a3403204267831a846c7189f5b2efc0f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7342304b54b4a25e3123db624d50af77 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46c969f11299bb67f57d41a690831e45 = $(`<div id="html_46c969f11299bb67f57d41a690831e45" style="width: 100.0%; height: 100.0%;"><b>Peter Hall Building UniMelb</b><br>MTZ Depot</div>`)[0];
+                popup_7342304b54b4a25e3123db624d50af77.setContent(html_46c969f11299bb67f57d41a690831e45);
+            
+        
+
+        marker_845d248ed76365a3fc6d970b9eaebb18.bindPopup(popup_7342304b54b4a25e3123db624d50af77)
+        ;
+
+        
+    
+    
+            marker_845d248ed76365a3fc6d970b9eaebb18.bindTooltip(
+                `<div>
+                     MTZ Depot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_845d248ed76365a3fc6d970b9eaebb18.setIcon(icon_a3403204267831a846c7189f5b2efc0f);
+            
+    
+            var poly_line_31b69b51c6a1a23e01099ce4da8e88fe = L.polyline(
+                [[-37.7982158, 144.9636857], [-37.7959659, 144.9799313]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_31b69b51c6a1a23e01099ce4da8e88fe.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Peter Hall Building UniMelb → Lune Croissanterie Fitzroy<br>Distance: 1.77 km<br>Travel time: 0.07 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_31b69b51c6a1a23e01099ce4da8e88fe.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_d0026b53406e88943699ea1606146f8f = L.polyline(
+                [[-37.8029711, 144.9590027], [-37.7982158, 144.9636857]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_d0026b53406e88943699ea1606146f8f.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Seven Seeds Coffee Roasters → Peter Hall Building UniMelb<br>Distance: 1.05 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_d0026b53406e88943699ea1606146f8f.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_6b272797604875a05b33e3c8b1c84139 = L.polyline(
+                [[-37.7948113, 144.9781341], [-37.7847929, 144.9823376]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_6b272797604875a05b33e3c8b1c84139.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Industry Beans Fitzroy → Standing Room Fitzroy North<br>Distance: 1.42 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_6b272797604875a05b33e3c8b1c84139.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_15cab989c503aaeaecd9a7801ff537e3 = L.polyline(
+                [[-37.776348, 144.972123], [-37.7775, 144.9722]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_15cab989c503aaeaecd9a7801ff537e3.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Market Lane Coffee HQ → Core Roasters<br>Distance: 0.29 km<br>Travel time: 0.01 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_15cab989c503aaeaecd9a7801ff537e3.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_ce0b6a97c00a515520748d2c9d0c0da1 = L.polyline(
+                [[-37.774643, 144.962468], [-37.7763047, 144.9612147]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_ce0b6a97c00a515520748d2c9d0c0da1.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Code Black Coffee Brunswick → Wide Open Road<br>Distance: 0.35 km<br>Travel time: 0.01 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_ce0b6a97c00a515520748d2c9d0c0da1.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_288975b74da808f8c04969c9d2d0bb33 = L.polyline(
+                [[-37.7763047, 144.9612147], [-37.775525, 144.9601403]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_288975b74da808f8c04969c9d2d0bb33.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Wide Open Road → Disciple Roasters<br>Distance: 0.18 km<br>Travel time: 0.01 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_288975b74da808f8c04969c9d2d0bb33.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_ad035f00e21e4ed1272281f1ac4de42a = L.polyline(
+                [[-37.7959659, 144.9799313], [-37.7948113, 144.9781341]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_ad035f00e21e4ed1272281f1ac4de42a.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Lune Croissanterie Fitzroy → Industry Beans Fitzroy<br>Distance: 0.38 km<br>Travel time: 0.02 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_ad035f00e21e4ed1272281f1ac4de42a.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_e165d3a4170cf89cf71d6bf76ed30947 = L.polyline(
+                [[-37.8043369, 144.9545001], [-37.8054501, 144.9542036]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_e165d3a4170cf89cf71d6bf76ed30947.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Small Batch Roasting Co. → Path Melbourne<br>Distance: 0.18 km<br>Travel time: 0.01 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_e165d3a4170cf89cf71d6bf76ed30947.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_4b1cc1c60a97a5e78af600683054fed0 = L.polyline(
+                [[-37.7641144, 144.9732824], [-37.761889, 144.961811]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_4b1cc1c60a97a5e78af600683054fed0.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Padre Coffee Brunswick East → Bench Coffee Co. Roastery<br>Distance: 1.50 km<br>Travel time: 0.05 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_4b1cc1c60a97a5e78af600683054fed0.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_7a7ccf4c8d7e407d9af4ce09bd49c8b8 = L.polyline(
+                [[-37.775525, 144.9601403], [-37.8043369, 144.9545001]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_7a7ccf4c8d7e407d9af4ce09bd49c8b8.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Disciple Roasters → Small Batch Roasting Co.<br>Distance: 3.60 km<br>Travel time: 0.09 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_7a7ccf4c8d7e407d9af4ce09bd49c8b8.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_651d6eaa47e99999a77a90060add78a8 = L.polyline(
+                [[-37.7847929, 144.9823376], [-37.776348, 144.972123]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_651d6eaa47e99999a77a90060add78a8.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Standing Room Fitzroy North → Market Lane Coffee HQ<br>Distance: 1.79 km<br>Travel time: 0.06 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_651d6eaa47e99999a77a90060add78a8.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_38e5137a14f593243e281ae4e8d3459d = L.polyline(
+                [[-37.761889, 144.961811], [-37.774643, 144.962468]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_38e5137a14f593243e281ae4e8d3459d.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Bench Coffee Co. Roastery → Code Black Coffee Brunswick<br>Distance: 1.69 km<br>Travel time: 0.07 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_38e5137a14f593243e281ae4e8d3459d.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_250277d4aa300d4492e75b8fcf502a79 = L.polyline(
+                [[-37.8054501, 144.9542036], [-37.8029711, 144.9590027]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_250277d4aa300d4492e75b8fcf502a79.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Path Melbourne → Seven Seeds Coffee Roasters<br>Distance: 0.91 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_250277d4aa300d4492e75b8fcf502a79.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_b7d4105c012f35450e9f6cd73d6cd139 = L.polyline(
+                [[-37.7775, 144.9722], [-37.7641144, 144.9732824]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_b7d4105c012f35450e9f6cd73d6cd139.bindTooltip(
+                `<div>
+                     MTZ<br>van_2<br>Core Roasters → Padre Coffee Brunswick East<br>Distance: 1.60 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_b7d4105c012f35450e9f6cd73d6cd139.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "darkblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_707dba9ec7aa3514fe8c2a36d02b6d7d = L.polyline(
+                [[-37.7982158, 144.9636857], [-37.8014, 144.9672]],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_707dba9ec7aa3514fe8c2a36d02b6d7d.bindTooltip(
+                `<div>
+                     MTZ<br>van_3<br>Peter Hall Building UniMelb → Market Lane Carlton<br>Distance: 0.94 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_707dba9ec7aa3514fe8c2a36d02b6d7d.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "cadetblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_a2f64d014bfee8f9baa7b6265b3195bc = L.polyline(
+                [[-37.8146934, 144.9582383], [-37.813541, 144.9620988]],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_a2f64d014bfee8f9baa7b6265b3195bc.bindTooltip(
+                `<div>
+                     MTZ<br>van_3<br>Patricia Coffee Brewers → Brother Baba Budan<br>Distance: 0.89 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_a2f64d014bfee8f9baa7b6265b3195bc.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "cadetblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_caa65d3dbf1439838653fd0698841631 = L.polyline(
+                [[-37.816791, 144.966162], [-37.8175, 144.964]],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_caa65d3dbf1439838653fd0698841631.bindTooltip(
+                `<div>
+                     MTZ<br>van_3<br>Dukes Coffee Roasters → Project Zero<br>Distance: 0.22 km<br>Travel time: 0.02 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_caa65d3dbf1439838653fd0698841631.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "cadetblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_8acc95a046600cdf49559a7779e3d9b6 = L.polyline(
+                [[-37.813541, 144.9620988], [-37.810993, 144.964066]],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_8acc95a046600cdf49559a7779e3d9b6.bindTooltip(
+                `<div>
+                     MTZ<br>van_3<br>Brother Baba Budan → Little Rogue<br>Distance: 0.69 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_8acc95a046600cdf49559a7779e3d9b6.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "cadetblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_c987af15011068707402796ac1da7ea7 = L.polyline(
+                [[-37.810993, 144.964066], [-37.8109, 144.9668]],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_c987af15011068707402796ac1da7ea7.bindTooltip(
+                `<div>
+                     MTZ<br>van_3<br>Little Rogue → Traveller Coffee<br>Distance: 0.31 km<br>Travel time: 0.01 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_c987af15011068707402796ac1da7ea7.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "cadetblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_61399e683765741133eee4ab6141de0b = L.polyline(
+                [[-37.8158579, 144.9720281], [-37.816791, 144.966162]],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_61399e683765741133eee4ab6141de0b.bindTooltip(
+                `<div>
+                     MTZ<br>van_3<br>Vacation Coffee CBD → Dukes Coffee Roasters<br>Distance: 0.76 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_61399e683765741133eee4ab6141de0b.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "cadetblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_860436a083990777bdef736abcc2c9ba = L.polyline(
+                [[-37.8014, 144.9672], [-37.8158579, 144.9720281]],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_860436a083990777bdef736abcc2c9ba.bindTooltip(
+                `<div>
+                     MTZ<br>van_3<br>Market Lane Carlton → Vacation Coffee CBD<br>Distance: 2.00 km<br>Travel time: 0.07 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_860436a083990777bdef736abcc2c9ba.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "cadetblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_ea7898f25fa623b8ec9b6a855e740166 = L.polyline(
+                [[-37.8109, 144.9668], [-37.7982158, 144.9636857]],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_ea7898f25fa623b8ec9b6a855e740166.bindTooltip(
+                `<div>
+                     MTZ<br>van_3<br>Traveller Coffee → Peter Hall Building UniMelb<br>Distance: 1.68 km<br>Travel time: 0.06 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_ea7898f25fa623b8ec9b6a855e740166.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "cadetblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_e7bffe26c2803d8480ef1261ff5ee3ee = L.polyline(
+                [[-37.8175, 144.964], [-37.8146934, 144.9582383]],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "cadetblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_e7bffe26c2803d8480ef1261ff5ee3ee.bindTooltip(
+                `<div>
+                     MTZ<br>van_3<br>Project Zero → Patricia Coffee Brewers<br>Distance: 0.81 km<br>Travel time: 0.04 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_e7bffe26c2803d8480ef1261ff5ee3ee.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "cadetblue",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_97862c7909b61ae3e682b024beab1e7f = L.polyline(
+                [[-37.7982158, 144.9636857], [-37.799384, 144.9781281]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_97862c7909b61ae3e682b024beab1e7f.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Peter Hall Building UniMelb → Jasper Coffee Fitzroy<br>Distance: 1.53 km<br>Travel time: 0.06 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_97862c7909b61ae3e682b024beab1e7f.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_7c87b7ad06008a5e47a6037b2105cec8 = L.polyline(
+                [[-37.8023383, 144.9851717], [-37.8028093, 144.9870052]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_7c87b7ad06008a5e47a6037b2105cec8.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Proud Mary Coffee → Aunty Peg's<br>Distance: 0.36 km<br>Travel time: 0.02 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_7c87b7ad06008a5e47a6037b2105cec8.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_b2de7f93e572379a1367fc3b2529cc35 = L.polyline(
+                [[-37.8312475, 144.960354], [-37.8108846, 144.9455841]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_b2de7f93e572379a1367fc3b2529cc35.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>ST. ALi Coffee Roasters → Five Senses Coffee<br>Distance: 3.07 km<br>Travel time: 0.09 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_b2de7f93e572379a1367fc3b2529cc35.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_a06d1949132dde0ab9c54c455e2b3d3f = L.polyline(
+                [[-37.8226075, 145.0342781], [-37.8269479, 144.9929394]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_a06d1949132dde0ab9c54c455e2b3d3f.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Axil Coffee Roasters → Square Lane Coffee<br>Distance: 4.83 km<br>Travel time: 0.13 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_a06d1949132dde0ab9c54c455e2b3d3f.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_e6b21dcd09a8dd0fd9f5fcc211ed7634 = L.polyline(
+                [[-37.7947678, 144.9342535], [-37.7982158, 144.9636857]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_e6b21dcd09a8dd0fd9f5fcc211ed7634.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Rumble Coffee Roasters → Peter Hall Building UniMelb<br>Distance: 3.20 km<br>Travel time: 0.11 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_e6b21dcd09a8dd0fd9f5fcc211ed7634.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_48c5073b8bc91c5a5f11d5eb6a6e0f76 = L.polyline(
+                [[-37.8028093, 144.9870052], [-37.8091416, 145.006767]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_48c5073b8bc91c5a5f11d5eb6a6e0f76.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Aunty Peg's → Coffee Supreme<br>Distance: 2.80 km<br>Travel time: 0.10 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_48c5073b8bc91c5a5f11d5eb6a6e0f76.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_881b29c78272fba61f060c399683e0d0 = L.polyline(
+                [[-37.799384, 144.9781281], [-37.7981641, 144.9858767]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_881b29c78272fba61f060c399683e0d0.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Jasper Coffee Fitzroy → Everyday Coffee<br>Distance: 0.84 km<br>Travel time: 0.03 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_881b29c78272fba61f060c399683e0d0.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_95aa221a6b9d29bed5d58321f3762bbb = L.polyline(
+                [[-37.7981641, 144.9858767], [-37.8023383, 144.9851717]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_95aa221a6b9d29bed5d58321f3762bbb.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Everyday Coffee → Proud Mary Coffee<br>Distance: 0.69 km<br>Travel time: 0.03 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_95aa221a6b9d29bed5d58321f3762bbb.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_e0e1db755d40ea35f8111a9375fb82d3 = L.polyline(
+                [[-37.8394531, 144.9963319], [-37.845757, 144.993288]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_e0e1db755d40ea35f8111a9375fb82d3.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>MAKER Coffee South Yarra → Market Lane Prahran Market<br>Distance: 0.86 km<br>Travel time: 0.03 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_e0e1db755d40ea35f8111a9375fb82d3.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_6ea6db780b3afc95329b082844650118 = L.polyline(
+                [[-37.8269479, 144.9929394], [-37.8394531, 144.9963319]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_6ea6db780b3afc95329b082844650118.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Square Lane Coffee → MAKER Coffee South Yarra<br>Distance: 2.38 km<br>Travel time: 0.07 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_6ea6db780b3afc95329b082844650118.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_f63596468ae8b8ecf0db1f0d811bb305 = L.polyline(
+                [[-37.8091416, 145.006767], [-37.8169555, 145.0131324]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_f63596468ae8b8ecf0db1f0d811bb305.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Coffee Supreme → Veneziano Coffee Richmond<br>Distance: 1.51 km<br>Travel time: 0.05 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_f63596468ae8b8ecf0db1f0d811bb305.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_eea0560f1a29b53aed076231b1ae9a1d = L.polyline(
+                [[-37.845757, 144.993288], [-37.8312475, 144.960354]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_eea0560f1a29b53aed076231b1ae9a1d.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Market Lane Prahran Market → ST. ALi Coffee Roasters<br>Distance: 4.09 km<br>Travel time: 0.11 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_eea0560f1a29b53aed076231b1ae9a1d.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_b20a75bc4b4cc490dc2c38779f6baf90 = L.polyline(
+                [[-37.8169555, 145.0131324], [-37.8226075, 145.0342781]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_b20a75bc4b4cc490dc2c38779f6baf90.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Veneziano Coffee Richmond → Axil Coffee Roasters<br>Distance: 2.27 km<br>Travel time: 0.05 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_b20a75bc4b4cc490dc2c38779f6baf90.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var poly_line_91910f67e3c503ff47dcd2377bf19e59 = L.polyline(
+                [[-37.8108846, 144.9455841], [-37.7947678, 144.9342535]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+            poly_line_91910f67e3c503ff47dcd2377bf19e59.bindTooltip(
+                `<div>
+                     MTZ<br>van_5<br>Five Senses Coffee → Rumble Coffee Roasters<br>Distance: 2.54 km<br>Travel time: 0.07 h
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_91910f67e3c503ff47dcd2377bf19e59.setText(
+                " \u2192 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "green",
+  "font-size": "12",
+  "font-weight": "bold",
+},
+}
+            );
+        
+    
+            var circle_marker_39126a10cb449198e674df4ae3ec877f = L.circleMarker(
+                [-37.8023383, 144.9851717],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.631100824138191, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_f0f51479fd91a5a161c943215fbf2d91 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_83a7bfa51206c1c50d9148c138f14473 = $(`<div id="html_83a7bfa51206c1c50d9148c138f14473" style="width: 100.0%; height: 100.0%;">         <b>Proud Mary Coffee</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 20.48 kg<br>         Margin: $58.20<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>11.00</td>       <td>11.33</td>       <td>15.40</td>     </tr>     <tr>       <td>milk_oat</td>       <td>3.00</td>       <td>3.09</td>       <td>6.30</td>     </tr>     <tr>       <td>milk_soy</td>       <td>1.00</td>       <td>1.02</td>       <td>1.90</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_f0f51479fd91a5a161c943215fbf2d91.setContent(html_83a7bfa51206c1c50d9148c138f14473);
+            
+        
+
+        circle_marker_39126a10cb449198e674df4ae3ec877f.bindPopup(popup_f0f51479fd91a5a161c943215fbf2d91)
+        ;
+
+        
+    
+    
+            circle_marker_39126a10cb449198e674df4ae3ec877f.bindTooltip(
+                `<div>
+                     Proud Mary Coffee | van_5 | $58.20
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fc2880176960f1c22694cca6e729926b = L.circleMarker(
+                [-37.8146934, 144.9582383],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_a8d57161f02af7797bb5748e1c9732fa = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_0e3badc786ba31021d6a940166bde1fa = $(`<div id="html_0e3badc786ba31021d6a940166bde1fa" style="width: 100.0%; height: 100.0%;">         <b>Patricia Coffee Brewers</b><br>         Solution: MTZ<br>         Van: van_3<br>         Weight: 88.15 kg<br>         Margin: $221.20<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>51.00</td>       <td>52.53</td>       <td>71.40</td>     </tr>     <tr>       <td>milk_oat</td>       <td>12.00</td>       <td>12.36</td>       <td>25.20</td>     </tr>     <tr>       <td>milk_soy</td>       <td>7.00</td>       <td>7.14</td>       <td>13.30</td>     </tr>     <tr>       <td>milk_almond</td>       <td>6.00</td>       <td>6.12</td>       <td>13.80</td>     </tr>     <tr>       <td>bean_house</td>       <td>5.00</td>       <td>5.00</td>       <td>42.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>3.00</td>       <td>3.00</td>       <td>36.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>2.00</td>       <td>2.00</td>       <td>19.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_a8d57161f02af7797bb5748e1c9732fa.setContent(html_0e3badc786ba31021d6a940166bde1fa);
+            
+        
+
+        circle_marker_fc2880176960f1c22694cca6e729926b.bindPopup(popup_a8d57161f02af7797bb5748e1c9732fa)
+        ;
+
+        
+    
+    
+            circle_marker_fc2880176960f1c22694cca6e729926b.bindTooltip(
+                `<div>
+                     Patricia Coffee Brewers | van_3 | $221.20
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3bd29a35652cfa748f23645ffe6eaddc = L.circleMarker(
+                [-37.8029711, 144.9590027],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.204339963833636, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_a058614128b66b4ba8a4c165c9400efe = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_65212cf57924f1fda4f07404c0a0d22c = $(`<div id="html_65212cf57924f1fda4f07404c0a0d22c" style="width: 100.0%; height: 100.0%;">         <b>Seven Seeds Coffee Roasters</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 30.70 kg<br>         Margin: $93.00<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>14.00</td>       <td>14.42</td>       <td>19.60</td>     </tr>     <tr>       <td>milk_oat</td>       <td>6.00</td>       <td>6.18</td>       <td>12.60</td>     </tr>     <tr>       <td>milk_soy</td>       <td>3.00</td>       <td>3.06</td>       <td>5.70</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>2.00</td>       <td>2.00</td>       <td>17.00</td>     </tr>     <tr>       <td>bean_single</td>       <td>2.00</td>       <td>2.00</td>       <td>24.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_a058614128b66b4ba8a4c165c9400efe.setContent(html_65212cf57924f1fda4f07404c0a0d22c);
+            
+        
+
+        circle_marker_3bd29a35652cfa748f23645ffe6eaddc.bindPopup(popup_a058614128b66b4ba8a4c165c9400efe)
+        ;
+
+        
+    
+    
+            circle_marker_3bd29a35652cfa748f23645ffe6eaddc.bindTooltip(
+                `<div>
+                     Seven Seeds Coffee Roasters | van_2 | $93.00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e506b9e69c9b8f03faf1d7f748b7a8f = L.circleMarker(
+                [-37.7948113, 144.9781341],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.054249547920435, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_74d0423736e9ef0a54e6a9de9ada0034 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_f07984a2e5ffa6c494b9ee32bbb0e1a8 = $(`<div id="html_f07984a2e5ffa6c494b9ee32bbb0e1a8" style="width: 100.0%; height: 100.0%;">         <b>Industry Beans Fitzroy</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 39.95 kg<br>         Margin: $111.80<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>23.00</td>       <td>23.69</td>       <td>32.20</td>     </tr>     <tr>       <td>milk_oat</td>       <td>6.00</td>       <td>6.18</td>       <td>12.60</td>     </tr>     <tr>       <td>milk_soy</td>       <td>3.00</td>       <td>3.06</td>       <td>5.70</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>3.00</td>       <td>3.00</td>       <td>25.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>2.00</td>       <td>2.00</td>       <td>24.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_74d0423736e9ef0a54e6a9de9ada0034.setContent(html_f07984a2e5ffa6c494b9ee32bbb0e1a8);
+            
+        
+
+        circle_marker_6e506b9e69c9b8f03faf1d7f748b7a8f.bindPopup(popup_74d0423736e9ef0a54e6a9de9ada0034)
+        ;
+
+        
+    
+    
+            circle_marker_6e506b9e69c9b8f03faf1d7f748b7a8f.bindTooltip(
+                `<div>
+                     Industry Beans Fitzroy | van_2 | $111.80
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4a079a70d96d235522848d64f316aa14 = L.circleMarker(
+                [-37.776348, 144.972123],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.798372513562387, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_5e36194e60ee5c4f61335f7e7d6aba75 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_8573f0b9b750e8be3b9c4d54dd77617b = $(`<div id="html_8573f0b9b750e8be3b9c4d54dd77617b" style="width: 100.0%; height: 100.0%;">         <b>Market Lane Coffee HQ</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 23.56 kg<br>         Margin: $61.90<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>13.00</td>       <td>13.39</td>       <td>18.20</td>     </tr>     <tr>       <td>milk_oat</td>       <td>3.00</td>       <td>3.09</td>       <td>6.30</td>     </tr>     <tr>       <td>milk_soy</td>       <td>2.00</td>       <td>2.04</td>       <td>3.80</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>2.00</td>       <td>2.00</td>       <td>17.00</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_5e36194e60ee5c4f61335f7e7d6aba75.setContent(html_8573f0b9b750e8be3b9c4d54dd77617b);
+            
+        
+
+        circle_marker_4a079a70d96d235522848d64f316aa14.bindPopup(popup_5e36194e60ee5c4f61335f7e7d6aba75)
+        ;
+
+        
+    
+    
+            circle_marker_4a079a70d96d235522848d64f316aa14.bindTooltip(
+                `<div>
+                     Market Lane Coffee HQ | van_2 | $61.90
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a36f31ace2aa38f828b3442454fb5632 = L.circleMarker(
+                [-37.8312475, 144.960354],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.119349005424954, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_3fb6388d3434957fa2f96181df751b61 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_8fcc66ea24dfd291cda9c8c5a07b3464 = $(`<div id="html_8fcc66ea24dfd291cda9c8c5a07b3464" style="width: 100.0%; height: 100.0%;">         <b>ST. ALi Coffee Roasters</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 27.67 kg<br>         Margin: $69.00<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>16.00</td>       <td>16.48</td>       <td>22.40</td>     </tr>     <tr>       <td>milk_oat</td>       <td>3.00</td>       <td>3.09</td>       <td>6.30</td>     </tr>     <tr>       <td>milk_soy</td>       <td>3.00</td>       <td>3.06</td>       <td>5.70</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_3fb6388d3434957fa2f96181df751b61.setContent(html_8fcc66ea24dfd291cda9c8c5a07b3464);
+            
+        
+
+        circle_marker_a36f31ace2aa38f828b3442454fb5632.bindPopup(popup_3fb6388d3434957fa2f96181df751b61)
+        ;
+
+        
+    
+    
+            circle_marker_a36f31ace2aa38f828b3442454fb5632.bindTooltip(
+                `<div>
+                     ST. ALi Coffee Roasters | van_5 | $69.00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eeca1f0c250b2d8913e981fbe012110b = L.circleMarker(
+                [-37.774643, 144.962468],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.707956600361664, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_a64f2cd0c4a75fe4b146161af98d93ca = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_f4d95da08fb38897996cefad571a71f2 = $(`<div id="html_f4d95da08fb38897996cefad571a71f2" style="width: 100.0%; height: 100.0%;">         <b>Code Black Coffee Brunswick</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 22.54 kg<br>         Margin: $59.90<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>14.00</td>       <td>14.42</td>       <td>19.60</td>     </tr>     <tr>       <td>milk_oat</td>       <td>2.00</td>       <td>2.06</td>       <td>4.20</td>     </tr>     <tr>       <td>milk_soy</td>       <td>2.00</td>       <td>2.04</td>       <td>3.80</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_a64f2cd0c4a75fe4b146161af98d93ca.setContent(html_f4d95da08fb38897996cefad571a71f2);
+            
+        
+
+        circle_marker_eeca1f0c250b2d8913e981fbe012110b.bindPopup(popup_a64f2cd0c4a75fe4b146161af98d93ca)
+        ;
+
+        
+    
+    
+            circle_marker_eeca1f0c250b2d8913e981fbe012110b.bindTooltip(
+                `<div>
+                     Code Black Coffee Brunswick | van_2 | $59.90
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_136246edb85f9aeb1f6ae7786e2a88e5 = L.circleMarker(
+                [-37.8226075, 145.0342781],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.802893309222423, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_a25a5cfda547ec9c93bb01e3f08dae41 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_6807b40d12af365b71742343ed2113f9 = $(`<div id="html_6807b40d12af365b71742343ed2113f9" style="width: 100.0%; height: 100.0%;">         <b>Axil Coffee Roasters</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 83.14 kg<br>         Margin: $172.60<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>48.00</td>       <td>49.44</td>       <td>67.20</td>     </tr>     <tr>       <td>milk_oat</td>       <td>14.00</td>       <td>14.42</td>       <td>29.40</td>     </tr>     <tr>       <td>milk_soy</td>       <td>8.00</td>       <td>8.16</td>       <td>15.20</td>     </tr>     <tr>       <td>milk_almond</td>       <td>6.00</td>       <td>6.12</td>       <td>13.80</td>     </tr>     <tr>       <td>bean_house</td>       <td>3.00</td>       <td>3.00</td>       <td>25.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_a25a5cfda547ec9c93bb01e3f08dae41.setContent(html_6807b40d12af365b71742343ed2113f9);
+            
+        
+
+        circle_marker_136246edb85f9aeb1f6ae7786e2a88e5.bindPopup(popup_a25a5cfda547ec9c93bb01e3f08dae41)
+        ;
+
+        
+    
+    
+            circle_marker_136246edb85f9aeb1f6ae7786e2a88e5.bindTooltip(
+                `<div>
+                     Axil Coffee Roasters | van_5 | $172.60
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_981009127b6893fa2dae6f86330fb8c0 = L.circleMarker(
+                [-37.816791, 144.966162],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.113924050632912, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_dd15b845fabe293a080fee49494edb46 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_2b35b8588cfec2073c55fb96fa841c79 = $(`<div id="html_2b35b8588cfec2073c55fb96fa841c79" style="width: 100.0%; height: 100.0%;">         <b>Dukes Coffee Roasters</b><br>         Solution: MTZ<br>         Van: van_3<br>         Weight: 37.91 kg<br>         Margin: $91.00<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>22.00</td>       <td>22.66</td>       <td>30.80</td>     </tr>     <tr>       <td>milk_oat</td>       <td>3.00</td>       <td>3.09</td>       <td>6.30</td>     </tr>     <tr>       <td>milk_soy</td>       <td>5.00</td>       <td>5.10</td>       <td>9.50</td>     </tr>     <tr>       <td>milk_almond</td>       <td>3.00</td>       <td>3.06</td>       <td>6.90</td>     </tr>     <tr>       <td>bean_house</td>       <td>3.00</td>       <td>3.00</td>       <td>25.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_dd15b845fabe293a080fee49494edb46.setContent(html_2b35b8588cfec2073c55fb96fa841c79);
+            
+        
+
+        circle_marker_981009127b6893fa2dae6f86330fb8c0.bindPopup(popup_dd15b845fabe293a080fee49494edb46)
+        ;
+
+        
+    
+    
+            circle_marker_981009127b6893fa2dae6f86330fb8c0.bindTooltip(
+                `<div>
+                     Dukes Coffee Roasters | van_3 | $91.00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_772c531538a0d3d622abf56cbe90d235 = L.circleMarker(
+                [-37.7947678, 144.9342535],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.376130198915009, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_7e392d7ed47acceff47c9f12f2de1a1f = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_1719f659b957ad776a1bc9e1b137c75a = $(`<div id="html_1719f659b957ad776a1bc9e1b137c75a" style="width: 100.0%; height: 100.0%;">         <b>Rumble Coffee Roasters</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 36.88 kg<br>         Margin: $96.80<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>21.00</td>       <td>21.63</td>       <td>29.40</td>     </tr>     <tr>       <td>milk_oat</td>       <td>5.00</td>       <td>5.15</td>       <td>10.50</td>     </tr>     <tr>       <td>milk_soy</td>       <td>4.00</td>       <td>4.08</td>       <td>7.60</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>3.00</td>       <td>3.00</td>       <td>25.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_7e392d7ed47acceff47c9f12f2de1a1f.setContent(html_1719f659b957ad776a1bc9e1b137c75a);
+            
+        
+
+        circle_marker_772c531538a0d3d622abf56cbe90d235.bindPopup(popup_7e392d7ed47acceff47c9f12f2de1a1f)
+        ;
+
+        
+    
+    
+            circle_marker_772c531538a0d3d622abf56cbe90d235.bindTooltip(
+                `<div>
+                     Rumble Coffee Roasters | van_5 | $96.80
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c9a8df3bfa7866520f4ab65c919539f = L.circleMarker(
+                [-37.7763047, 144.9612147],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.405063291139241, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_224a06474fedda13c0be76ffc35e7a5e = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_1f16c2ba6f62dd8c4b076b2c450a4634 = $(`<div id="html_1f16c2ba6f62dd8c4b076b2c450a4634" style="width: 100.0%; height: 100.0%;">         <b>Wide Open Road</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 24.63 kg<br>         Margin: $53.20<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>16.00</td>       <td>16.48</td>       <td>22.40</td>     </tr>     <tr>       <td>milk_oat</td>       <td>3.00</td>       <td>3.09</td>       <td>6.30</td>     </tr>     <tr>       <td>milk_soy</td>       <td>1.00</td>       <td>1.02</td>       <td>1.90</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_224a06474fedda13c0be76ffc35e7a5e.setContent(html_1f16c2ba6f62dd8c4b076b2c450a4634);
+            
+        
+
+        circle_marker_1c9a8df3bfa7866520f4ab65c919539f.bindPopup(popup_224a06474fedda13c0be76ffc35e7a5e)
+        ;
+
+        
+    
+    
+            circle_marker_1c9a8df3bfa7866520f4ab65c919539f.bindTooltip(
+                `<div>
+                     Wide Open Road | van_2 | $53.20
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b5d1a9423fa69ade9fa4a9cb85813f9 = L.circleMarker(
+                [-37.8028093, 144.9870052],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.590415913200724, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_b9668d814f61ed2816c4cd652c1343af = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_2e3da684eedfffe3a0b0c7df3c346678 = $(`<div id="html_2e3da684eedfffe3a0b0c7df3c346678" style="width: 100.0%; height: 100.0%;">         <b>Aunty Peg's</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 62.48 kg<br>         Margin: $167.90<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>35.00</td>       <td>36.05</td>       <td>49.00</td>     </tr>     <tr>       <td>milk_oat</td>       <td>7.00</td>       <td>7.21</td>       <td>14.70</td>     </tr>     <tr>       <td>milk_soy</td>       <td>4.00</td>       <td>4.08</td>       <td>7.60</td>     </tr>     <tr>       <td>milk_almond</td>       <td>7.00</td>       <td>7.14</td>       <td>16.10</td>     </tr>     <tr>       <td>bean_house</td>       <td>3.00</td>       <td>3.00</td>       <td>25.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>3.00</td>       <td>3.00</td>       <td>36.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>2.00</td>       <td>2.00</td>       <td>19.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_b9668d814f61ed2816c4cd652c1343af.setContent(html_2e3da684eedfffe3a0b0c7df3c346678);
+            
+        
+
+        circle_marker_4b5d1a9423fa69ade9fa4a9cb85813f9.bindPopup(popup_b9668d814f61ed2816c4cd652c1343af)
+        ;
+
+        
+    
+    
+            circle_marker_4b5d1a9423fa69ade9fa4a9cb85813f9.bindTooltip(
+                `<div>
+                     Aunty Peg's | van_5 | $167.90
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7185819bb7a1f45247295d631031275a = L.circleMarker(
+                [-37.813541, 144.9620988],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.14737793851718, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_bcf866d645c7f81b2ce249e9f1275419 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_3d586c5c387df16c262d19d09a30b45b = $(`<div id="html_3d586c5c387df16c262d19d09a30b45b" style="width: 100.0%; height: 100.0%;">         <b>Brother Baba Budan</b><br>         Solution: MTZ<br>         Van: van_3<br>         Weight: 60.46 kg<br>         Margin: $158.10<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>31.00</td>       <td>31.93</td>       <td>43.40</td>     </tr>     <tr>       <td>milk_oat</td>       <td>11.00</td>       <td>11.33</td>       <td>23.10</td>     </tr>     <tr>       <td>milk_soy</td>       <td>6.00</td>       <td>6.12</td>       <td>11.40</td>     </tr>     <tr>       <td>milk_almond</td>       <td>4.00</td>       <td>4.08</td>       <td>9.20</td>     </tr>     <tr>       <td>bean_house</td>       <td>3.00</td>       <td>3.00</td>       <td>25.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>3.00</td>       <td>3.00</td>       <td>36.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_bcf866d645c7f81b2ce249e9f1275419.setContent(html_3d586c5c387df16c262d19d09a30b45b);
+            
+        
+
+        circle_marker_7185819bb7a1f45247295d631031275a.bindPopup(popup_bcf866d645c7f81b2ce249e9f1275419)
+        ;
+
+        
+    
+    
+            circle_marker_7185819bb7a1f45247295d631031275a.bindTooltip(
+                `<div>
+                     Brother Baba Budan | van_3 | $158.10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd02a28ce45977bd6b6f09c5289961a6 = L.circleMarker(
+                [-37.7959659, 144.9799313],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.585895117540687, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_06733868e949d9b199f0230d7ce86bbd = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_83d27a6784a767e8c96db83023112a7c = $(`<div id="html_83d27a6784a767e8c96db83023112a7c" style="width: 100.0%; height: 100.0%;">         <b>Lune Croissanterie Fitzroy</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 25.65 kg<br>         Margin: $57.20<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>16.00</td>       <td>16.48</td>       <td>22.40</td>     </tr>     <tr>       <td>milk_oat</td>       <td>3.00</td>       <td>3.09</td>       <td>6.30</td>     </tr>     <tr>       <td>milk_soy</td>       <td>3.00</td>       <td>3.06</td>       <td>5.70</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_06733868e949d9b199f0230d7ce86bbd.setContent(html_83d27a6784a767e8c96db83023112a7c);
+            
+        
+
+        circle_marker_bd02a28ce45977bd6b6f09c5289961a6.bindPopup(popup_06733868e949d9b199f0230d7ce86bbd)
+        ;
+
+        
+    
+    
+            circle_marker_bd02a28ce45977bd6b6f09c5289961a6.bindTooltip(
+                `<div>
+                     Lune Croissanterie Fitzroy | van_2 | $57.20
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75f77bd5f8e7c31a3b6f9b7a7914b23a = L.circleMarker(
+                [-37.8043369, 144.9545001],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.043399638336347, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_b814d3822e4e2fd3637832b193d78ed7 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_f510c5413ccec96797436aa1830f02cd = $(`<div id="html_f510c5413ccec96797436aa1830f02cd" style="width: 100.0%; height: 100.0%;">         <b>Small Batch Roasting Co.</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 24.65 kg<br>         Margin: $45.20<br>         Products: 5.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>16.00</td>       <td>16.48</td>       <td>22.40</td>     </tr>     <tr>       <td>milk_oat</td>       <td>3.00</td>       <td>3.09</td>       <td>6.30</td>     </tr>     <tr>       <td>milk_soy</td>       <td>3.00</td>       <td>3.06</td>       <td>5.70</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_b814d3822e4e2fd3637832b193d78ed7.setContent(html_f510c5413ccec96797436aa1830f02cd);
+            
+        
+
+        circle_marker_75f77bd5f8e7c31a3b6f9b7a7914b23a.bindPopup(popup_b814d3822e4e2fd3637832b193d78ed7)
+        ;
+
+        
+    
+    
+            circle_marker_75f77bd5f8e7c31a3b6f9b7a7914b23a.bindTooltip(
+                `<div>
+                     Small Batch Roasting Co. | van_2 | $45.20
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_321de5620e16ac3c6a5bb33ae62e9ccf = L.circleMarker(
+                [-37.7641144, 144.9732824],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.097649186256781, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_b8e1fb6c90296c61c23284ae2ad6d67a = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_fc8b340c02fdae44befb0724bba39fcd = $(`<div id="html_fc8b340c02fdae44befb0724bba39fcd" style="width: 100.0%; height: 100.0%;">         <b>Padre Coffee Brunswick East</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 18.46 kg<br>         Margin: $46.40<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>11.00</td>       <td>11.33</td>       <td>15.40</td>     </tr>     <tr>       <td>milk_oat</td>       <td>3.00</td>       <td>3.09</td>       <td>6.30</td>     </tr>     <tr>       <td>milk_soy</td>       <td>1.00</td>       <td>1.02</td>       <td>1.90</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_b8e1fb6c90296c61c23284ae2ad6d67a.setContent(html_fc8b340c02fdae44befb0724bba39fcd);
+            
+        
+
+        circle_marker_321de5620e16ac3c6a5bb33ae62e9ccf.bindPopup(popup_b8e1fb6c90296c61c23284ae2ad6d67a)
+        ;
+
+        
+    
+    
+            circle_marker_321de5620e16ac3c6a5bb33ae62e9ccf.bindTooltip(
+                `<div>
+                     Padre Coffee Brunswick East | van_2 | $46.40
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d4482bb954701f321641981f955fc50d = L.circleMarker(
+                [-37.799384, 144.9781281],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.482820976491863, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_55973a6242fee44e9793c07b16c882f9 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_5faf98e6c40826d601f5c42d43a530bf = $(`<div id="html_5faf98e6c40826d601f5c42d43a530bf" style="width: 100.0%; height: 100.0%;">         <b>Jasper Coffee Fitzroy</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 16.42 kg<br>         Margin: $32.80<br>         Products: 5.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>10.00</td>       <td>10.30</td>       <td>14.00</td>     </tr>     <tr>       <td>milk_oat</td>       <td>2.00</td>       <td>2.06</td>       <td>4.20</td>     </tr>     <tr>       <td>milk_soy</td>       <td>2.00</td>       <td>2.04</td>       <td>3.80</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_55973a6242fee44e9793c07b16c882f9.setContent(html_5faf98e6c40826d601f5c42d43a530bf);
+            
+        
+
+        circle_marker_d4482bb954701f321641981f955fc50d.bindPopup(popup_55973a6242fee44e9793c07b16c882f9)
+        ;
+
+        
+    
+    
+            circle_marker_d4482bb954701f321641981f955fc50d.bindTooltip(
+                `<div>
+                     Jasper Coffee Fitzroy | van_5 | $32.80
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5223be85b07859db9623a804b21b25ab = L.circleMarker(
+                [-37.7981641, 144.9858767],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.412296564195298, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_c14eea3c440e3cf39ffb8dbf459ed9a1 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_3ad8b5d816de2f5dbe0a3a0558e26afb = $(`<div id="html_3ad8b5d816de2f5dbe0a3a0558e26afb" style="width: 100.0%; height: 100.0%;">         <b>Everyday Coffee</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 42.05 kg<br>         Margin: $97.60<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>24.00</td>       <td>24.72</td>       <td>33.60</td>     </tr>     <tr>       <td>milk_oat</td>       <td>7.00</td>       <td>7.21</td>       <td>14.70</td>     </tr>     <tr>       <td>milk_soy</td>       <td>5.00</td>       <td>5.10</td>       <td>9.50</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>3.00</td>       <td>3.00</td>       <td>25.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_c14eea3c440e3cf39ffb8dbf459ed9a1.setContent(html_3ad8b5d816de2f5dbe0a3a0558e26afb);
+            
+        
+
+        circle_marker_5223be85b07859db9623a804b21b25ab.bindPopup(popup_c14eea3c440e3cf39ffb8dbf459ed9a1)
+        ;
+
+        
+    
+    
+            circle_marker_5223be85b07859db9623a804b21b25ab.bindTooltip(
+                `<div>
+                     Everyday Coffee | van_5 | $97.60
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3cdb8264f026b6551d550db44e1ef9a0 = L.circleMarker(
+                [-37.8394531, 144.9963319],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.707052441229656, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_d25c0aeb7de804538868bb3b541b7fc0 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_868ef513f2ea625f28cba677ad0346b5 = $(`<div id="html_868ef513f2ea625f28cba677ad0346b5" style="width: 100.0%; height: 100.0%;">         <b>MAKER Coffee South Yarra</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 33.85 kg<br>         Margin: $82.00<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>19.00</td>       <td>19.57</td>       <td>26.60</td>     </tr>     <tr>       <td>milk_oat</td>       <td>6.00</td>       <td>6.18</td>       <td>12.60</td>     </tr>     <tr>       <td>milk_soy</td>       <td>3.00</td>       <td>3.06</td>       <td>5.70</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>2.00</td>       <td>2.00</td>       <td>24.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_d25c0aeb7de804538868bb3b541b7fc0.setContent(html_868ef513f2ea625f28cba677ad0346b5);
+            
+        
+
+        circle_marker_3cdb8264f026b6551d550db44e1ef9a0.bindPopup(popup_d25c0aeb7de804538868bb3b541b7fc0)
+        ;
+
+        
+    
+    
+            circle_marker_3cdb8264f026b6551d550db44e1ef9a0.bindTooltip(
+                `<div>
+                     MAKER Coffee South Yarra | van_5 | $82.00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_809d9a28ab973d9b90b59082365d0150 = L.circleMarker(
+                [-37.8269479, 144.9929394],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.906871609403255, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_d78c5a4c8715d96267bf4135e3b58178 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_236b63b50195724097c3d6d07bc99cc1 = $(`<div id="html_236b63b50195724097c3d6d07bc99cc1" style="width: 100.0%; height: 100.0%;">         <b>Square Lane Coffee</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 24.59 kg<br>         Margin: $64.30<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>14.00</td>       <td>14.42</td>       <td>19.60</td>     </tr>     <tr>       <td>milk_oat</td>       <td>3.00</td>       <td>3.09</td>       <td>6.30</td>     </tr>     <tr>       <td>milk_soy</td>       <td>2.00</td>       <td>2.04</td>       <td>3.80</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_d78c5a4c8715d96267bf4135e3b58178.setContent(html_236b63b50195724097c3d6d07bc99cc1);
+            
+        
+
+        circle_marker_809d9a28ab973d9b90b59082365d0150.bindPopup(popup_d78c5a4c8715d96267bf4135e3b58178)
+        ;
+
+        
+    
+    
+            circle_marker_809d9a28ab973d9b90b59082365d0150.bindTooltip(
+                `<div>
+                     Square Lane Coffee | van_5 | $64.30
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9a5233c577f1f460f633966ff415b7df = L.circleMarker(
+                [-37.775525, 144.9601403],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.630198915009043, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_5bb83b08ae52abc4f321525083b536ac = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_706b142dd3b4dd61bfed551fd71137c9 = $(`<div id="html_706b142dd3b4dd61bfed551fd71137c9" style="width: 100.0%; height: 100.0%;">         <b>Disciple Roasters</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 34.88 kg<br>         Margin: $80.30<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>20.00</td>       <td>20.60</td>       <td>28.00</td>     </tr>     <tr>       <td>milk_oat</td>       <td>6.00</td>       <td>6.18</td>       <td>12.60</td>     </tr>     <tr>       <td>milk_soy</td>       <td>2.00</td>       <td>2.04</td>       <td>3.80</td>     </tr>     <tr>       <td>milk_almond</td>       <td>3.00</td>       <td>3.06</td>       <td>6.90</td>     </tr>     <tr>       <td>bean_house</td>       <td>2.00</td>       <td>2.00</td>       <td>17.00</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_5bb83b08ae52abc4f321525083b536ac.setContent(html_706b142dd3b4dd61bfed551fd71137c9);
+            
+        
+
+        circle_marker_9a5233c577f1f460f633966ff415b7df.bindPopup(popup_5bb83b08ae52abc4f321525083b536ac)
+        ;
+
+        
+    
+    
+            circle_marker_9a5233c577f1f460f633966ff415b7df.bindTooltip(
+                `<div>
+                     Disciple Roasters | van_2 | $80.30
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_50d0d5431ee79139c7830516892b8a1f = L.circleMarker(
+                [-37.8091416, 145.006767],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.056962025316456, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_788918b6877dad5409dc48bb3100e67e = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_bbebc341d75b15ece7a3f9435d20f4f6 = $(`<div id="html_bbebc341d75b15ece7a3f9435d20f4f6" style="width: 100.0%; height: 100.0%;">         <b>Coffee Supreme</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 19.48 kg<br>         Margin: $45.50<br>         Products: 5.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>10.00</td>       <td>10.30</td>       <td>14.00</td>     </tr>     <tr>       <td>milk_oat</td>       <td>4.00</td>       <td>4.12</td>       <td>8.40</td>     </tr>     <tr>       <td>milk_soy</td>       <td>2.00</td>       <td>2.04</td>       <td>3.80</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>2.00</td>       <td>2.00</td>       <td>17.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_788918b6877dad5409dc48bb3100e67e.setContent(html_bbebc341d75b15ece7a3f9435d20f4f6);
+            
+        
+
+        circle_marker_50d0d5431ee79139c7830516892b8a1f.bindPopup(popup_788918b6877dad5409dc48bb3100e67e)
+        ;
+
+        
+    
+    
+            circle_marker_50d0d5431ee79139c7830516892b8a1f.bindTooltip(
+                `<div>
+                     Coffee Supreme | van_5 | $45.50
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_496defa1c2482cfacd290a98ee6c99d4 = L.circleMarker(
+                [-37.845757, 144.993288],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.3327305605786615, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_f3cd5347b66d87a5780418048664c15e = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_92a2431cca4e7c109dd3acb9b1ec9329 = $(`<div id="html_92a2431cca4e7c109dd3acb9b1ec9329" style="width: 100.0%; height: 100.0%;">         <b>Market Lane Prahran Market</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 22.56 kg<br>         Margin: $51.60<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>12.00</td>       <td>12.36</td>       <td>16.80</td>     </tr>     <tr>       <td>milk_oat</td>       <td>4.00</td>       <td>4.12</td>       <td>8.40</td>     </tr>     <tr>       <td>milk_soy</td>       <td>2.00</td>       <td>2.04</td>       <td>3.80</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_f3cd5347b66d87a5780418048664c15e.setContent(html_92a2431cca4e7c109dd3acb9b1ec9329);
+            
+        
+
+        circle_marker_496defa1c2482cfacd290a98ee6c99d4.bindPopup(popup_f3cd5347b66d87a5780418048664c15e)
+        ;
+
+        
+    
+    
+            circle_marker_496defa1c2482cfacd290a98ee6c99d4.bindTooltip(
+                `<div>
+                     Market Lane Prahran Market | van_5 | $51.60
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb03eea4536dd5f8282d850c0700a0a9 = L.circleMarker(
+                [-37.8169555, 145.0131324],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.852622061482821, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_d85d9ec33ff45558a73932faf086cfa8 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_3bf82f9808c9816d3e06c3593921d757 = $(`<div id="html_3bf82f9808c9816d3e06c3593921d757" style="width: 100.0%; height: 100.0%;">         <b>Veneziano Coffee Richmond</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 24.58 kg<br>         Margin: $63.10<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>14.00</td>       <td>14.42</td>       <td>19.60</td>     </tr>     <tr>       <td>milk_oat</td>       <td>2.00</td>       <td>2.06</td>       <td>4.20</td>     </tr>     <tr>       <td>milk_soy</td>       <td>3.00</td>       <td>3.06</td>       <td>5.70</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>2.00</td>       <td>2.00</td>       <td>17.00</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_d85d9ec33ff45558a73932faf086cfa8.setContent(html_3bf82f9808c9816d3e06c3593921d757);
+            
+        
+
+        circle_marker_fb03eea4536dd5f8282d850c0700a0a9.bindPopup(popup_d85d9ec33ff45558a73932faf086cfa8)
+        ;
+
+        
+    
+    
+            circle_marker_fb03eea4536dd5f8282d850c0700a0a9.bindTooltip(
+                `<div>
+                     Veneziano Coffee Richmond | van_5 | $63.10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_45f4e6ff1ff035b0ddf1bdee96263114 = L.circleMarker(
+                [-37.8108846, 144.9455841],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.077757685352623, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_c106cfbf29c5968dd75d1c99d197e39f = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_892cbfe8e9deb03b2867b81422234713 = $(`<div id="html_892cbfe8e9deb03b2867b81422234713" style="width: 100.0%; height: 100.0%;">         <b>Five Senses Coffee</b><br>         Solution: MTZ<br>         Van: van_5<br>         Weight: 37.93 kg<br>         Margin: $90.20<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>24.00</td>       <td>24.72</td>       <td>33.60</td>     </tr>     <tr>       <td>milk_oat</td>       <td>3.00</td>       <td>3.09</td>       <td>6.30</td>     </tr>     <tr>       <td>milk_soy</td>       <td>5.00</td>       <td>5.10</td>       <td>9.50</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>2.00</td>       <td>2.00</td>       <td>17.00</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_c106cfbf29c5968dd75d1c99d197e39f.setContent(html_892cbfe8e9deb03b2867b81422234713);
+            
+        
+
+        circle_marker_45f4e6ff1ff035b0ddf1bdee96263114.bindPopup(popup_c106cfbf29c5968dd75d1c99d197e39f)
+        ;
+
+        
+    
+    
+            circle_marker_45f4e6ff1ff035b0ddf1bdee96263114.bindTooltip(
+                `<div>
+                     Five Senses Coffee | van_5 | $90.20
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d326be32207dd61fcc8d91c992d40055 = L.circleMarker(
+                [-37.7847929, 144.9823376],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.52622061482821, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_bffbf352498c87867db2d5668069dce6 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_19cddf9a05a591386ba4f7e99306c279 = $(`<div id="html_19cddf9a05a591386ba4f7e99306c279" style="width: 100.0%; height: 100.0%;">         <b>Standing Room Fitzroy North</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 32.81 kg<br>         Margin: $78.00<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>17.00</td>       <td>17.51</td>       <td>23.80</td>     </tr>     <tr>       <td>milk_oat</td>       <td>6.00</td>       <td>6.18</td>       <td>12.60</td>     </tr>     <tr>       <td>milk_soy</td>       <td>3.00</td>       <td>3.06</td>       <td>5.70</td>     </tr>     <tr>       <td>milk_almond</td>       <td>3.00</td>       <td>3.06</td>       <td>6.90</td>     </tr>     <tr>       <td>bean_house</td>       <td>2.00</td>       <td>2.00</td>       <td>17.00</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_bffbf352498c87867db2d5668069dce6.setContent(html_19cddf9a05a591386ba4f7e99306c279);
+            
+        
+
+        circle_marker_d326be32207dd61fcc8d91c992d40055.bindPopup(popup_bffbf352498c87867db2d5668069dce6)
+        ;
+
+        
+    
+    
+            circle_marker_d326be32207dd61fcc8d91c992d40055.bindTooltip(
+                `<div>
+                     Standing Room Fitzroy North | van_2 | $78.00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_436628d86e9a28c54e4abe14aa52d0be = L.circleMarker(
+                [-37.761889, 144.961811],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.6220614828209765, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_a3d8f06c461de41eb718d1b570947655 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_ac2e930f3c035224a5371141073f3e5c = $(`<div id="html_ac2e930f3c035224a5371141073f3e5c" style="width: 100.0%; height: 100.0%;">         <b>Bench Coffee Co. Roastery</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 21.52 kg<br>         Margin: $58.00<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>14.00</td>       <td>14.42</td>       <td>19.60</td>     </tr>     <tr>       <td>milk_oat</td>       <td>2.00</td>       <td>2.06</td>       <td>4.20</td>     </tr>     <tr>       <td>milk_soy</td>       <td>1.00</td>       <td>1.02</td>       <td>1.90</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_a3d8f06c461de41eb718d1b570947655.setContent(html_ac2e930f3c035224a5371141073f3e5c);
+            
+        
+
+        circle_marker_436628d86e9a28c54e4abe14aa52d0be.bindPopup(popup_a3d8f06c461de41eb718d1b570947655)
+        ;
+
+        
+    
+    
+            circle_marker_436628d86e9a28c54e4abe14aa52d0be.bindTooltip(
+                `<div>
+                     Bench Coffee Co. Roastery | van_2 | $58.00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d30d3833a8fff099c72cb6542dc4f74 = L.circleMarker(
+                [-37.8054501, 144.9542036],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.136528028933093, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_7cdb7a34fd780904a84b6ffa795a01bb = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_d629ec7a5dc4116d4ce991b704b83086 = $(`<div id="html_d629ec7a5dc4116d4ce991b704b83086" style="width: 100.0%; height: 100.0%;">         <b>Path Melbourne</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 42.08 kg<br>         Margin: $91.50<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>25.00</td>       <td>25.75</td>       <td>35.00</td>     </tr>     <tr>       <td>milk_oat</td>       <td>7.00</td>       <td>7.21</td>       <td>14.70</td>     </tr>     <tr>       <td>milk_soy</td>       <td>5.00</td>       <td>5.10</td>       <td>9.50</td>     </tr>     <tr>       <td>milk_almond</td>       <td>1.00</td>       <td>1.02</td>       <td>2.30</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_7cdb7a34fd780904a84b6ffa795a01bb.setContent(html_d629ec7a5dc4116d4ce991b704b83086);
+            
+        
+
+        circle_marker_8d30d3833a8fff099c72cb6542dc4f74.bindPopup(popup_7cdb7a34fd780904a84b6ffa795a01bb)
+        ;
+
+        
+    
+    
+            circle_marker_8d30d3833a8fff099c72cb6542dc4f74.bindTooltip(
+                `<div>
+                     Path Melbourne | van_2 | $91.50
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa67232b579908c7ba97ac0af0b2467e = L.circleMarker(
+                [-37.810993, 144.964066],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.10488245931284, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_fda1142c6dc870bca964c0c752f76fea = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_50a1f6e96e476a5ef5264066aead4905 = $(`<div id="html_50a1f6e96e476a5ef5264066aead4905" style="width: 100.0%; height: 100.0%;">         <b>Little Rogue</b><br>         Solution: MTZ<br>         Van: van_3<br>         Weight: 33.80 kg<br>         Margin: $90.80<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>15.00</td>       <td>15.45</td>       <td>21.00</td>     </tr>     <tr>       <td>milk_oat</td>       <td>7.00</td>       <td>7.21</td>       <td>14.70</td>     </tr>     <tr>       <td>milk_soy</td>       <td>5.00</td>       <td>5.10</td>       <td>9.50</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>2.00</td>       <td>2.00</td>       <td>17.00</td>     </tr>     <tr>       <td>bean_single</td>       <td>2.00</td>       <td>2.00</td>       <td>24.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_fda1142c6dc870bca964c0c752f76fea.setContent(html_50a1f6e96e476a5ef5264066aead4905);
+            
+        
+
+        circle_marker_fa67232b579908c7ba97ac0af0b2467e.bindPopup(popup_fda1142c6dc870bca964c0c752f76fea)
+        ;
+
+        
+    
+    
+            circle_marker_fa67232b579908c7ba97ac0af0b2467e.bindTooltip(
+                `<div>
+                     Little Rogue | van_3 | $90.80
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b8ac3e485e5e3f1ddddccc8d631494d = L.circleMarker(
+                [-37.8158579, 144.9720281],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.05244122965642, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_fcb4fc5bfea561852618bf9a137652c5 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_9a18d24f1e0a27e1150da5978620959c = $(`<div id="html_9a18d24f1e0a27e1150da5978620959c" style="width: 100.0%; height: 100.0%;">         <b>Vacation Coffee CBD</b><br>         Solution: MTZ<br>         Van: van_3<br>         Weight: 23.61 kg<br>         Margin: $45.40<br>         Products: 5.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>13.00</td>       <td>13.39</td>       <td>18.20</td>     </tr>     <tr>       <td>milk_oat</td>       <td>4.00</td>       <td>4.12</td>       <td>8.40</td>     </tr>     <tr>       <td>milk_soy</td>       <td>3.00</td>       <td>3.06</td>       <td>5.70</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_fcb4fc5bfea561852618bf9a137652c5.setContent(html_9a18d24f1e0a27e1150da5978620959c);
+            
+        
+
+        circle_marker_6b8ac3e485e5e3f1ddddccc8d631494d.bindPopup(popup_fcb4fc5bfea561852618bf9a137652c5)
+        ;
+
+        
+    
+    
+            circle_marker_6b8ac3e485e5e3f1ddddccc8d631494d.bindTooltip(
+                `<div>
+                     Vacation Coffee CBD | van_3 | $45.40
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_628394219d8e75f29caeebfd2d4b43da = L.circleMarker(
+                [-37.8014, 144.9672],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.358047016274865, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_2fcbd9685e78758e06baf9a121f4ee6e = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_1cec634f52881ef15dbca262e14e5cdd = $(`<div id="html_1cec634f52881ef15dbca262e14e5cdd" style="width: 100.0%; height: 100.0%;">         <b>Market Lane Carlton</b><br>         Solution: MTZ<br>         Van: van_3<br>         Weight: 37.92 kg<br>         Margin: $96.40<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>19.00</td>       <td>19.57</td>       <td>26.60</td>     </tr>     <tr>       <td>milk_oat</td>       <td>7.00</td>       <td>7.21</td>       <td>14.70</td>     </tr>     <tr>       <td>milk_soy</td>       <td>5.00</td>       <td>5.10</td>       <td>9.50</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>2.00</td>       <td>2.00</td>       <td>17.00</td>     </tr>     <tr>       <td>bean_single</td>       <td>2.00</td>       <td>2.00</td>       <td>24.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_2fcbd9685e78758e06baf9a121f4ee6e.setContent(html_1cec634f52881ef15dbca262e14e5cdd);
+            
+        
+
+        circle_marker_628394219d8e75f29caeebfd2d4b43da.bindPopup(popup_2fcbd9685e78758e06baf9a121f4ee6e)
+        ;
+
+        
+    
+    
+            circle_marker_628394219d8e75f29caeebfd2d4b43da.bindTooltip(
+                `<div>
+                     Market Lane Carlton | van_3 | $96.40
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ea92f34c724e10e9c4819ed57601b22a = L.circleMarker(
+                [-37.8109, 144.9668],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.852622061482821, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_6161a4938bfc9cd10e40a0c7721cf1ff = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_2a08d1b10cbef1d41d91a4298f84f432 = $(`<div id="html_2a08d1b10cbef1d41d91a4298f84f432" style="width: 100.0%; height: 100.0%;">         <b>Traveller Coffee</b><br>         Solution: MTZ<br>         Van: van_3<br>         Weight: 24.60 kg<br>         Margin: $63.10<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>16.00</td>       <td>16.48</td>       <td>22.40</td>     </tr>     <tr>       <td>milk_oat</td>       <td>2.00</td>       <td>2.06</td>       <td>4.20</td>     </tr>     <tr>       <td>milk_soy</td>       <td>1.00</td>       <td>1.02</td>       <td>1.90</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>1.00</td>       <td>1.00</td>       <td>9.50</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_6161a4938bfc9cd10e40a0c7721cf1ff.setContent(html_2a08d1b10cbef1d41d91a4298f84f432);
+            
+        
+
+        circle_marker_ea92f34c724e10e9c4819ed57601b22a.bindPopup(popup_6161a4938bfc9cd10e40a0c7721cf1ff)
+        ;
+
+        
+    
+    
+            circle_marker_ea92f34c724e10e9c4819ed57601b22a.bindTooltip(
+                `<div>
+                     Traveller Coffee | van_3 | $63.10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d71879501096c9971113713b15ed5ab = L.circleMarker(
+                [-37.7775, 144.9722],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.658227848101266, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_a1efadfcf49471251d0356add54b9038 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_dacbc6ac57b8bc395cbba99b3b925e72 = $(`<div id="html_dacbc6ac57b8bc395cbba99b3b925e72" style="width: 100.0%; height: 100.0%;">         <b>Core Roasters</b><br>         Solution: MTZ<br>         Van: van_2<br>         Weight: 25.64 kg<br>         Margin: $58.80<br>         Products: 6.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>14.00</td>       <td>14.42</td>       <td>19.60</td>     </tr>     <tr>       <td>milk_oat</td>       <td>4.00</td>       <td>4.12</td>       <td>8.40</td>     </tr>     <tr>       <td>milk_soy</td>       <td>3.00</td>       <td>3.06</td>       <td>5.70</td>     </tr>     <tr>       <td>milk_almond</td>       <td>2.00</td>       <td>2.04</td>       <td>4.60</td>     </tr>     <tr>       <td>bean_house</td>       <td>1.00</td>       <td>1.00</td>       <td>8.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_a1efadfcf49471251d0356add54b9038.setContent(html_dacbc6ac57b8bc395cbba99b3b925e72);
+            
+        
+
+        circle_marker_8d71879501096c9971113713b15ed5ab.bindPopup(popup_a1efadfcf49471251d0356add54b9038)
+        ;
+
+        
+    
+    
+            circle_marker_8d71879501096c9971113713b15ed5ab.bindTooltip(
+                `<div>
+                     Core Roasters | van_2 | $58.80
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e9baa378bf2bab8ee25c9d47fdb0f22 = L.circleMarker(
+                [-37.8175, 144.964],
+                {"bubblingMouseEvents": true, "color": "cadetblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cadetblue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.85262206148282, "stroke": true, "weight": 3}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+        
+    
+        var popup_d2250de02ac844c2cf13e4f2737d01e2 = L.popup({
+  "maxWidth": 550,
+});
+
+        
+            
+                var html_c51449cfa943328b3bd5bad60871e9f7 = $(`<div id="html_c51449cfa943328b3bd5bad60871e9f7" style="width: 100.0%; height: 100.0%;">         <b>Project Zero</b><br>         Solution: MTZ<br>         Van: van_3<br>         Weight: 82.10 kg<br>         Margin: $173.70<br>         Products: 7.0<br><br>         <b>Product details</b>         <table class="dataframe">   <thead>     <tr style="text-align: right;">       <th>product_id</th>       <th>quantity</th>       <th>total_weight_kg</th>       <th>total_margin</th>     </tr>   </thead>   <tbody>     <tr>       <td>milk_full</td>       <td>54.00</td>       <td>55.62</td>       <td>75.60</td>     </tr>     <tr>       <td>milk_oat</td>       <td>8.00</td>       <td>8.24</td>       <td>16.80</td>     </tr>     <tr>       <td>milk_soy</td>       <td>7.00</td>       <td>7.14</td>       <td>13.30</td>     </tr>     <tr>       <td>milk_almond</td>       <td>5.00</td>       <td>5.10</td>       <td>11.50</td>     </tr>     <tr>       <td>bean_house</td>       <td>3.00</td>       <td>3.00</td>       <td>25.50</td>     </tr>     <tr>       <td>bean_single</td>       <td>1.00</td>       <td>1.00</td>       <td>12.00</td>     </tr>     <tr>       <td>bean_decaf</td>       <td>2.00</td>       <td>2.00</td>       <td>19.00</td>     </tr>   </tbody> </table>         </div>`)[0];
+                popup_d2250de02ac844c2cf13e4f2737d01e2.setContent(html_c51449cfa943328b3bd5bad60871e9f7);
+            
+        
+
+        circle_marker_6e9baa378bf2bab8ee25c9d47fdb0f22.bindPopup(popup_d2250de02ac844c2cf13e4f2737d01e2)
+        ;
+
+        
+    
+    
+            circle_marker_6e9baa378bf2bab8ee25c9d47fdb0f22.bindTooltip(
+                `<div>
+                     Project Zero | van_3 | $173.70
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_e540776d5153836f6271ae2ea17a6fe7_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_7cc322b69786e21259e17f3f94a2d7a3,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_e540776d5153836f6271ae2ea17a6fe7 = L.control.layers(
+                layer_control_e540776d5153836f6271ae2ea17a6fe7_layers.base_layers,
+                layer_control_e540776d5153836f6271ae2ea17a6fe7_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_18990d63e562a9425be011c3e7e5fc9f);
+
+        
+</script>
+</html>
