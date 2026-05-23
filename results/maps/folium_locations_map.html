@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a6eff49897bc41b12aed1cf9490f2142 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    z-index: 9999;
+
+    background-color: white;
+    border: 2px solid grey;
+    border-radius: 6px;
+
+    padding: 12px;
+    font-size: 14px;
+
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+">
+    <b>Legend</b><br><br>
+
+    <div>
+        <span style="
+            display:inline-block;
+            width:10px;
+            height:10px;
+            background:blue;
+            border-radius:50%;
+            margin-right:8px;
+        "></span>
+        Cafes
+    </div>
+
+    <div style="margin-top:6px;">
+        <span style="
+            color:red;
+            font-size:18px;
+            margin-right:6px;
+        ">★</span>
+        Depot
+    </div>
+</div>
+    
+            <div class="folium-map" id="map_a6eff49897bc41b12aed1cf9490f2142" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a6eff49897bc41b12aed1cf9490f2142 = L.map(
+                "map_a6eff49897bc41b12aed1cf9490f2142",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 1,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_17ff3187bc0a91a88756e9d8cedd2a8c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_17ff3187bc0a91a88756e9d8cedd2a8c.addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+            map_a6eff49897bc41b12aed1cf9490f2142.fitBounds(
+                [[-37.845757, 144.9342535], [-37.761889, 145.0342781]],
+                {}
+            );
+        
+    
+            var marker_f83174af66824eafb1d5fb37c05bddd2 = L.marker(
+                [-37.7982158, 144.9636857],
+                {
+}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+            var icon_122e69eb371d696684413a7d1b56e045 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3278c2e8be9eedde7eeda19bc1c60026 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f3c46447182128089316287a7c73bc4 = $(`<div id="html_1f3c46447182128089316287a7c73bc4" style="width: 100.0%; height: 100.0%;"><b>Peter Hall Building UniMelb</b><br>Depot</div>`)[0];
+                popup_3278c2e8be9eedde7eeda19bc1c60026.setContent(html_1f3c46447182128089316287a7c73bc4);
+            
+        
+
+        marker_f83174af66824eafb1d5fb37c05bddd2.bindPopup(popup_3278c2e8be9eedde7eeda19bc1c60026)
+        ;
+
+        
+    
+    
+            marker_f83174af66824eafb1d5fb37c05bddd2.bindTooltip(
+                `<div>
+                     Peter Hall Building UniMelb
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f83174af66824eafb1d5fb37c05bddd2.setIcon(icon_122e69eb371d696684413a7d1b56e045);
+            
+    
+            var circle_marker_bf11da3b9dfb5a1b06bcd003922c9558 = L.circleMarker(
+                [-37.8023383, 144.9851717],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_d45e88ac81a843eac11d2090f390f02d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e4a172a1f9a8721fccb80f1d193df7b = $(`<div id="html_0e4a172a1f9a8721fccb80f1d193df7b" style="width: 100.0%; height: 100.0%;"><b>Proud Mary Coffee</b></div>`)[0];
+                popup_d45e88ac81a843eac11d2090f390f02d.setContent(html_0e4a172a1f9a8721fccb80f1d193df7b);
+            
+        
+
+        circle_marker_bf11da3b9dfb5a1b06bcd003922c9558.bindPopup(popup_d45e88ac81a843eac11d2090f390f02d)
+        ;
+
+        
+    
+    
+            circle_marker_bf11da3b9dfb5a1b06bcd003922c9558.bindTooltip(
+                `<div>
+                     Proud Mary Coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0ee635012b69ae7f5e63553361db9cc7 = L.circleMarker(
+                [-37.8146934, 144.9582383],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_7bb00eddf05e8ea17e94ad6bfdf85958 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08e6b2b5b9a50d51d21b7f0ad442cff9 = $(`<div id="html_08e6b2b5b9a50d51d21b7f0ad442cff9" style="width: 100.0%; height: 100.0%;"><b>Patricia Coffee Brewers</b></div>`)[0];
+                popup_7bb00eddf05e8ea17e94ad6bfdf85958.setContent(html_08e6b2b5b9a50d51d21b7f0ad442cff9);
+            
+        
+
+        circle_marker_0ee635012b69ae7f5e63553361db9cc7.bindPopup(popup_7bb00eddf05e8ea17e94ad6bfdf85958)
+        ;
+
+        
+    
+    
+            circle_marker_0ee635012b69ae7f5e63553361db9cc7.bindTooltip(
+                `<div>
+                     Patricia Coffee Brewers
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac96e65ae7172d5578fbdb8fd170dc97 = L.circleMarker(
+                [-37.8029711, 144.9590027],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_8f2051c375195fefcdc82f913eb41f41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_24b9e2af02a0b298bf34585d14eeac56 = $(`<div id="html_24b9e2af02a0b298bf34585d14eeac56" style="width: 100.0%; height: 100.0%;"><b>Seven Seeds Coffee Roasters</b></div>`)[0];
+                popup_8f2051c375195fefcdc82f913eb41f41.setContent(html_24b9e2af02a0b298bf34585d14eeac56);
+            
+        
+
+        circle_marker_ac96e65ae7172d5578fbdb8fd170dc97.bindPopup(popup_8f2051c375195fefcdc82f913eb41f41)
+        ;
+
+        
+    
+    
+            circle_marker_ac96e65ae7172d5578fbdb8fd170dc97.bindTooltip(
+                `<div>
+                     Seven Seeds Coffee Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_272c2908ef54dc9a9e24d684c33aa36f = L.circleMarker(
+                [-37.7948113, 144.9781341],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_c99b6dc322b68a0e3a2d30787f44b803 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f8064dcf76d46425dd12738eb68d7a6 = $(`<div id="html_6f8064dcf76d46425dd12738eb68d7a6" style="width: 100.0%; height: 100.0%;"><b>Industry Beans Fitzroy</b></div>`)[0];
+                popup_c99b6dc322b68a0e3a2d30787f44b803.setContent(html_6f8064dcf76d46425dd12738eb68d7a6);
+            
+        
+
+        circle_marker_272c2908ef54dc9a9e24d684c33aa36f.bindPopup(popup_c99b6dc322b68a0e3a2d30787f44b803)
+        ;
+
+        
+    
+    
+            circle_marker_272c2908ef54dc9a9e24d684c33aa36f.bindTooltip(
+                `<div>
+                     Industry Beans Fitzroy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57be28770a8dae15a6cf7ec2f4518eb0 = L.circleMarker(
+                [-37.776348, 144.972123],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_13c6c1e67d6e5f544cdbc7fa44a98183 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca9a1a6dbed83a8836e3815c73e10413 = $(`<div id="html_ca9a1a6dbed83a8836e3815c73e10413" style="width: 100.0%; height: 100.0%;"><b>Market Lane Coffee HQ</b></div>`)[0];
+                popup_13c6c1e67d6e5f544cdbc7fa44a98183.setContent(html_ca9a1a6dbed83a8836e3815c73e10413);
+            
+        
+
+        circle_marker_57be28770a8dae15a6cf7ec2f4518eb0.bindPopup(popup_13c6c1e67d6e5f544cdbc7fa44a98183)
+        ;
+
+        
+    
+    
+            circle_marker_57be28770a8dae15a6cf7ec2f4518eb0.bindTooltip(
+                `<div>
+                     Market Lane Coffee HQ
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_843a5972eaab0477e6c87ba5badfe986 = L.circleMarker(
+                [-37.8312475, 144.960354],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_b00dfc4428bd684efc360a9d99c92c3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82219e968f9a3b0c3ddaacd4175f38c8 = $(`<div id="html_82219e968f9a3b0c3ddaacd4175f38c8" style="width: 100.0%; height: 100.0%;"><b>ST. ALi Coffee Roasters</b></div>`)[0];
+                popup_b00dfc4428bd684efc360a9d99c92c3c.setContent(html_82219e968f9a3b0c3ddaacd4175f38c8);
+            
+        
+
+        circle_marker_843a5972eaab0477e6c87ba5badfe986.bindPopup(popup_b00dfc4428bd684efc360a9d99c92c3c)
+        ;
+
+        
+    
+    
+            circle_marker_843a5972eaab0477e6c87ba5badfe986.bindTooltip(
+                `<div>
+                     ST. ALi Coffee Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c2c660b8e0b5c2b27ce04818086aa060 = L.circleMarker(
+                [-37.774643, 144.962468],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_249bf758d670b5bca7a319e432e03da2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c7881fc8f6150744dc167d1eff67c52 = $(`<div id="html_5c7881fc8f6150744dc167d1eff67c52" style="width: 100.0%; height: 100.0%;"><b>Code Black Coffee Brunswick</b></div>`)[0];
+                popup_249bf758d670b5bca7a319e432e03da2.setContent(html_5c7881fc8f6150744dc167d1eff67c52);
+            
+        
+
+        circle_marker_c2c660b8e0b5c2b27ce04818086aa060.bindPopup(popup_249bf758d670b5bca7a319e432e03da2)
+        ;
+
+        
+    
+    
+            circle_marker_c2c660b8e0b5c2b27ce04818086aa060.bindTooltip(
+                `<div>
+                     Code Black Coffee Brunswick
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_173a51e22a60f12e17b8c9c842da1d52 = L.circleMarker(
+                [-37.8226075, 145.0342781],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_d822d29d3f425f736a55b46dfc425f93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7fd861d5bbc812f3cfe15d344f86cdf9 = $(`<div id="html_7fd861d5bbc812f3cfe15d344f86cdf9" style="width: 100.0%; height: 100.0%;"><b>Axil Coffee Roasters</b></div>`)[0];
+                popup_d822d29d3f425f736a55b46dfc425f93.setContent(html_7fd861d5bbc812f3cfe15d344f86cdf9);
+            
+        
+
+        circle_marker_173a51e22a60f12e17b8c9c842da1d52.bindPopup(popup_d822d29d3f425f736a55b46dfc425f93)
+        ;
+
+        
+    
+    
+            circle_marker_173a51e22a60f12e17b8c9c842da1d52.bindTooltip(
+                `<div>
+                     Axil Coffee Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_730a3e578df1a6e04160e10b8eba3dad = L.circleMarker(
+                [-37.816791, 144.966162],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_dcab1533804bbc4c9b1f7aa62ae6bd0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e59c23ec59a82ad8365191a53e006fc = $(`<div id="html_8e59c23ec59a82ad8365191a53e006fc" style="width: 100.0%; height: 100.0%;"><b>Dukes Coffee Roasters</b></div>`)[0];
+                popup_dcab1533804bbc4c9b1f7aa62ae6bd0c.setContent(html_8e59c23ec59a82ad8365191a53e006fc);
+            
+        
+
+        circle_marker_730a3e578df1a6e04160e10b8eba3dad.bindPopup(popup_dcab1533804bbc4c9b1f7aa62ae6bd0c)
+        ;
+
+        
+    
+    
+            circle_marker_730a3e578df1a6e04160e10b8eba3dad.bindTooltip(
+                `<div>
+                     Dukes Coffee Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e192749da2d076d774735073c80c798 = L.circleMarker(
+                [-37.7947678, 144.9342535],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_d916cc6f0f6648c64ba8ab15dcf81f8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_235c00c632934139ed394692366d1df1 = $(`<div id="html_235c00c632934139ed394692366d1df1" style="width: 100.0%; height: 100.0%;"><b>Rumble Coffee Roasters</b></div>`)[0];
+                popup_d916cc6f0f6648c64ba8ab15dcf81f8a.setContent(html_235c00c632934139ed394692366d1df1);
+            
+        
+
+        circle_marker_0e192749da2d076d774735073c80c798.bindPopup(popup_d916cc6f0f6648c64ba8ab15dcf81f8a)
+        ;
+
+        
+    
+    
+            circle_marker_0e192749da2d076d774735073c80c798.bindTooltip(
+                `<div>
+                     Rumble Coffee Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e93944cd3c2e09351ee2b87ee7bbd0f8 = L.circleMarker(
+                [-37.7763047, 144.9612147],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_252bce8cc89ae8f656731d01d2077017 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50360a673d20c124f76a38e40a380807 = $(`<div id="html_50360a673d20c124f76a38e40a380807" style="width: 100.0%; height: 100.0%;"><b>Wide Open Road</b></div>`)[0];
+                popup_252bce8cc89ae8f656731d01d2077017.setContent(html_50360a673d20c124f76a38e40a380807);
+            
+        
+
+        circle_marker_e93944cd3c2e09351ee2b87ee7bbd0f8.bindPopup(popup_252bce8cc89ae8f656731d01d2077017)
+        ;
+
+        
+    
+    
+            circle_marker_e93944cd3c2e09351ee2b87ee7bbd0f8.bindTooltip(
+                `<div>
+                     Wide Open Road
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_967adf9470a691bf317cfefb85d7dd9c = L.circleMarker(
+                [-37.8028093, 144.9870052],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_35698a7130d98bce8ad508ba51b46baa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51881011aca7430a024408e15ded7905 = $(`<div id="html_51881011aca7430a024408e15ded7905" style="width: 100.0%; height: 100.0%;"><b>Aunty Peg's</b></div>`)[0];
+                popup_35698a7130d98bce8ad508ba51b46baa.setContent(html_51881011aca7430a024408e15ded7905);
+            
+        
+
+        circle_marker_967adf9470a691bf317cfefb85d7dd9c.bindPopup(popup_35698a7130d98bce8ad508ba51b46baa)
+        ;
+
+        
+    
+    
+            circle_marker_967adf9470a691bf317cfefb85d7dd9c.bindTooltip(
+                `<div>
+                     Aunty Peg's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_43e22284007e0f0a1c90f43c3dac9b51 = L.circleMarker(
+                [-37.813541, 144.9620988],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_6fc50fa3ed9db6f76c6de24b45e22094 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab979e80edc87925112d7a3426bb102e = $(`<div id="html_ab979e80edc87925112d7a3426bb102e" style="width: 100.0%; height: 100.0%;"><b>Brother Baba Budan</b></div>`)[0];
+                popup_6fc50fa3ed9db6f76c6de24b45e22094.setContent(html_ab979e80edc87925112d7a3426bb102e);
+            
+        
+
+        circle_marker_43e22284007e0f0a1c90f43c3dac9b51.bindPopup(popup_6fc50fa3ed9db6f76c6de24b45e22094)
+        ;
+
+        
+    
+    
+            circle_marker_43e22284007e0f0a1c90f43c3dac9b51.bindTooltip(
+                `<div>
+                     Brother Baba Budan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_606901ba3358a7e5887f5ff8042ecc3f = L.circleMarker(
+                [-37.7959659, 144.9799313],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_14f8b7e919b6e3fa2a72d71d43081264 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65110904973c844b9388386ccfbebc6f = $(`<div id="html_65110904973c844b9388386ccfbebc6f" style="width: 100.0%; height: 100.0%;"><b>Lune Croissanterie Fitzroy</b></div>`)[0];
+                popup_14f8b7e919b6e3fa2a72d71d43081264.setContent(html_65110904973c844b9388386ccfbebc6f);
+            
+        
+
+        circle_marker_606901ba3358a7e5887f5ff8042ecc3f.bindPopup(popup_14f8b7e919b6e3fa2a72d71d43081264)
+        ;
+
+        
+    
+    
+            circle_marker_606901ba3358a7e5887f5ff8042ecc3f.bindTooltip(
+                `<div>
+                     Lune Croissanterie Fitzroy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2f047be26ea48b18abdf04a626864a13 = L.circleMarker(
+                [-37.8043369, 144.9545001],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_01d1d597a55bde8da646c682791ae250 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55b4abf306f5dd28acbac6f2d0a54ff5 = $(`<div id="html_55b4abf306f5dd28acbac6f2d0a54ff5" style="width: 100.0%; height: 100.0%;"><b>Small Batch Roasting Co.</b></div>`)[0];
+                popup_01d1d597a55bde8da646c682791ae250.setContent(html_55b4abf306f5dd28acbac6f2d0a54ff5);
+            
+        
+
+        circle_marker_2f047be26ea48b18abdf04a626864a13.bindPopup(popup_01d1d597a55bde8da646c682791ae250)
+        ;
+
+        
+    
+    
+            circle_marker_2f047be26ea48b18abdf04a626864a13.bindTooltip(
+                `<div>
+                     Small Batch Roasting Co.
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8724a3c47ebc8647a3a29711e122143f = L.circleMarker(
+                [-37.7641144, 144.9732824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_a7e7119f125bf22bf793a743593c11d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_adb2128939e1ad40c06fd08c0f9454c9 = $(`<div id="html_adb2128939e1ad40c06fd08c0f9454c9" style="width: 100.0%; height: 100.0%;"><b>Padre Coffee Brunswick East</b></div>`)[0];
+                popup_a7e7119f125bf22bf793a743593c11d3.setContent(html_adb2128939e1ad40c06fd08c0f9454c9);
+            
+        
+
+        circle_marker_8724a3c47ebc8647a3a29711e122143f.bindPopup(popup_a7e7119f125bf22bf793a743593c11d3)
+        ;
+
+        
+    
+    
+            circle_marker_8724a3c47ebc8647a3a29711e122143f.bindTooltip(
+                `<div>
+                     Padre Coffee Brunswick East
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b62d89ae3ff20217306604590f74bbf5 = L.circleMarker(
+                [-37.799384, 144.9781281],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_ab0b64ba23c2b5a364ebe745741060d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f77f9e93361d18e57776c23d77a1b0c = $(`<div id="html_3f77f9e93361d18e57776c23d77a1b0c" style="width: 100.0%; height: 100.0%;"><b>Jasper Coffee Fitzroy</b></div>`)[0];
+                popup_ab0b64ba23c2b5a364ebe745741060d1.setContent(html_3f77f9e93361d18e57776c23d77a1b0c);
+            
+        
+
+        circle_marker_b62d89ae3ff20217306604590f74bbf5.bindPopup(popup_ab0b64ba23c2b5a364ebe745741060d1)
+        ;
+
+        
+    
+    
+            circle_marker_b62d89ae3ff20217306604590f74bbf5.bindTooltip(
+                `<div>
+                     Jasper Coffee Fitzroy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0087a1dcc993da3debb485e5ab8ba1b = L.circleMarker(
+                [-37.7981641, 144.9858767],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_05208efbf97beb19f6b6affaf2d186df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1affc7dbbe4844ad3f92da5c05ee436d = $(`<div id="html_1affc7dbbe4844ad3f92da5c05ee436d" style="width: 100.0%; height: 100.0%;"><b>Everyday Coffee</b></div>`)[0];
+                popup_05208efbf97beb19f6b6affaf2d186df.setContent(html_1affc7dbbe4844ad3f92da5c05ee436d);
+            
+        
+
+        circle_marker_b0087a1dcc993da3debb485e5ab8ba1b.bindPopup(popup_05208efbf97beb19f6b6affaf2d186df)
+        ;
+
+        
+    
+    
+            circle_marker_b0087a1dcc993da3debb485e5ab8ba1b.bindTooltip(
+                `<div>
+                     Everyday Coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_37faf56baec1b8c2314ab8eb05322564 = L.circleMarker(
+                [-37.8394531, 144.9963319],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_16e8d901bdc9b3942a36bb6e0899dafe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e47f9d00e6484fb2d4838c0078d4d5f8 = $(`<div id="html_e47f9d00e6484fb2d4838c0078d4d5f8" style="width: 100.0%; height: 100.0%;"><b>MAKER Coffee South Yarra</b></div>`)[0];
+                popup_16e8d901bdc9b3942a36bb6e0899dafe.setContent(html_e47f9d00e6484fb2d4838c0078d4d5f8);
+            
+        
+
+        circle_marker_37faf56baec1b8c2314ab8eb05322564.bindPopup(popup_16e8d901bdc9b3942a36bb6e0899dafe)
+        ;
+
+        
+    
+    
+            circle_marker_37faf56baec1b8c2314ab8eb05322564.bindTooltip(
+                `<div>
+                     MAKER Coffee South Yarra
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_458d7b85fbe257dd2e79d1ada4cbc5a0 = L.circleMarker(
+                [-37.8269479, 144.9929394],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_55150ce93855fe4479cc7b0c252fc94b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_caaaa3f07e144f9b6c516ae876dd370f = $(`<div id="html_caaaa3f07e144f9b6c516ae876dd370f" style="width: 100.0%; height: 100.0%;"><b>Square Lane Coffee</b></div>`)[0];
+                popup_55150ce93855fe4479cc7b0c252fc94b.setContent(html_caaaa3f07e144f9b6c516ae876dd370f);
+            
+        
+
+        circle_marker_458d7b85fbe257dd2e79d1ada4cbc5a0.bindPopup(popup_55150ce93855fe4479cc7b0c252fc94b)
+        ;
+
+        
+    
+    
+            circle_marker_458d7b85fbe257dd2e79d1ada4cbc5a0.bindTooltip(
+                `<div>
+                     Square Lane Coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b104a4449d61358be3e1aca506087e0 = L.circleMarker(
+                [-37.775525, 144.9601403],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_d5fa441724aa55c7de72100d3505100c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ee7e0bcfe8c6daf84809f2fa82f7fc17 = $(`<div id="html_ee7e0bcfe8c6daf84809f2fa82f7fc17" style="width: 100.0%; height: 100.0%;"><b>Disciple Roasters</b></div>`)[0];
+                popup_d5fa441724aa55c7de72100d3505100c.setContent(html_ee7e0bcfe8c6daf84809f2fa82f7fc17);
+            
+        
+
+        circle_marker_5b104a4449d61358be3e1aca506087e0.bindPopup(popup_d5fa441724aa55c7de72100d3505100c)
+        ;
+
+        
+    
+    
+            circle_marker_5b104a4449d61358be3e1aca506087e0.bindTooltip(
+                `<div>
+                     Disciple Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0d65706d1dbe5383bbd18e85a84de97 = L.circleMarker(
+                [-37.8091416, 145.006767],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_d7e97ad12426a97ff80ff8d151ce8978 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19e4832aba27d193cc2ebfed83ccd79f = $(`<div id="html_19e4832aba27d193cc2ebfed83ccd79f" style="width: 100.0%; height: 100.0%;"><b>Coffee Supreme</b></div>`)[0];
+                popup_d7e97ad12426a97ff80ff8d151ce8978.setContent(html_19e4832aba27d193cc2ebfed83ccd79f);
+            
+        
+
+        circle_marker_b0d65706d1dbe5383bbd18e85a84de97.bindPopup(popup_d7e97ad12426a97ff80ff8d151ce8978)
+        ;
+
+        
+    
+    
+            circle_marker_b0d65706d1dbe5383bbd18e85a84de97.bindTooltip(
+                `<div>
+                     Coffee Supreme
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_605c40bb7c994834bd67cb079d2ce53f = L.circleMarker(
+                [-37.845757, 144.993288],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_9de7399bf5323cb8fe8354d069ddb35a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44669db2dabcb3dfc8cfad3bd0894e84 = $(`<div id="html_44669db2dabcb3dfc8cfad3bd0894e84" style="width: 100.0%; height: 100.0%;"><b>Market Lane Prahran Market</b></div>`)[0];
+                popup_9de7399bf5323cb8fe8354d069ddb35a.setContent(html_44669db2dabcb3dfc8cfad3bd0894e84);
+            
+        
+
+        circle_marker_605c40bb7c994834bd67cb079d2ce53f.bindPopup(popup_9de7399bf5323cb8fe8354d069ddb35a)
+        ;
+
+        
+    
+    
+            circle_marker_605c40bb7c994834bd67cb079d2ce53f.bindTooltip(
+                `<div>
+                     Market Lane Prahran Market
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e67773501a210af23e75860d79118d0 = L.circleMarker(
+                [-37.8169555, 145.0131324],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_10990f6df68d86eaf0429964dfa28c9d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad7036644e1b86eed2db41b017b2e5e0 = $(`<div id="html_ad7036644e1b86eed2db41b017b2e5e0" style="width: 100.0%; height: 100.0%;"><b>Veneziano Coffee Richmond</b></div>`)[0];
+                popup_10990f6df68d86eaf0429964dfa28c9d.setContent(html_ad7036644e1b86eed2db41b017b2e5e0);
+            
+        
+
+        circle_marker_8e67773501a210af23e75860d79118d0.bindPopup(popup_10990f6df68d86eaf0429964dfa28c9d)
+        ;
+
+        
+    
+    
+            circle_marker_8e67773501a210af23e75860d79118d0.bindTooltip(
+                `<div>
+                     Veneziano Coffee Richmond
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3108a496ada0c38785eaac09d8ef274a = L.circleMarker(
+                [-37.8108846, 144.9455841],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_74a649b78a74adb7da297ddf9b44a25a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d0d7edffa3e5a5acb4ea47d03d5a9e0 = $(`<div id="html_4d0d7edffa3e5a5acb4ea47d03d5a9e0" style="width: 100.0%; height: 100.0%;"><b>Five Senses Coffee</b></div>`)[0];
+                popup_74a649b78a74adb7da297ddf9b44a25a.setContent(html_4d0d7edffa3e5a5acb4ea47d03d5a9e0);
+            
+        
+
+        circle_marker_3108a496ada0c38785eaac09d8ef274a.bindPopup(popup_74a649b78a74adb7da297ddf9b44a25a)
+        ;
+
+        
+    
+    
+            circle_marker_3108a496ada0c38785eaac09d8ef274a.bindTooltip(
+                `<div>
+                     Five Senses Coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4810ed43cfa11a21d8abe3e6d2166ef0 = L.circleMarker(
+                [-37.7847929, 144.9823376],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_fea51185fd2c94afd7018250b2a0d4c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2966b544636515bf6d2b0b9002d18a5 = $(`<div id="html_f2966b544636515bf6d2b0b9002d18a5" style="width: 100.0%; height: 100.0%;"><b>Standing Room Fitzroy North</b></div>`)[0];
+                popup_fea51185fd2c94afd7018250b2a0d4c2.setContent(html_f2966b544636515bf6d2b0b9002d18a5);
+            
+        
+
+        circle_marker_4810ed43cfa11a21d8abe3e6d2166ef0.bindPopup(popup_fea51185fd2c94afd7018250b2a0d4c2)
+        ;
+
+        
+    
+    
+            circle_marker_4810ed43cfa11a21d8abe3e6d2166ef0.bindTooltip(
+                `<div>
+                     Standing Room Fitzroy North
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_22813bbb6b1f1dec1443a58131aefd13 = L.circleMarker(
+                [-37.761889, 144.961811],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_a27f129555ad07a32963698a9f65df81 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9899342d4c45284ea4cef03bbe4d6be0 = $(`<div id="html_9899342d4c45284ea4cef03bbe4d6be0" style="width: 100.0%; height: 100.0%;"><b>Bench Coffee Co. Roastery</b></div>`)[0];
+                popup_a27f129555ad07a32963698a9f65df81.setContent(html_9899342d4c45284ea4cef03bbe4d6be0);
+            
+        
+
+        circle_marker_22813bbb6b1f1dec1443a58131aefd13.bindPopup(popup_a27f129555ad07a32963698a9f65df81)
+        ;
+
+        
+    
+    
+            circle_marker_22813bbb6b1f1dec1443a58131aefd13.bindTooltip(
+                `<div>
+                     Bench Coffee Co. Roastery
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e1ed0e93b2f86d5fdd0c07a91d4c453 = L.circleMarker(
+                [-37.8054501, 144.9542036],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_5b64876c8d716d6ec6f3306e81936457 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad9c03f8ce94937c2365c3a87e14df4f = $(`<div id="html_ad9c03f8ce94937c2365c3a87e14df4f" style="width: 100.0%; height: 100.0%;"><b>Path Melbourne</b></div>`)[0];
+                popup_5b64876c8d716d6ec6f3306e81936457.setContent(html_ad9c03f8ce94937c2365c3a87e14df4f);
+            
+        
+
+        circle_marker_2e1ed0e93b2f86d5fdd0c07a91d4c453.bindPopup(popup_5b64876c8d716d6ec6f3306e81936457)
+        ;
+
+        
+    
+    
+            circle_marker_2e1ed0e93b2f86d5fdd0c07a91d4c453.bindTooltip(
+                `<div>
+                     Path Melbourne
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e50b38c1318c5df953486e2fd00e086 = L.circleMarker(
+                [-37.810993, 144.964066],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_347711068db450433b5789adc09e99aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_79f1dec6f374a84cdcb358d99d80e928 = $(`<div id="html_79f1dec6f374a84cdcb358d99d80e928" style="width: 100.0%; height: 100.0%;"><b>Little Rogue</b></div>`)[0];
+                popup_347711068db450433b5789adc09e99aa.setContent(html_79f1dec6f374a84cdcb358d99d80e928);
+            
+        
+
+        circle_marker_9e50b38c1318c5df953486e2fd00e086.bindPopup(popup_347711068db450433b5789adc09e99aa)
+        ;
+
+        
+    
+    
+            circle_marker_9e50b38c1318c5df953486e2fd00e086.bindTooltip(
+                `<div>
+                     Little Rogue
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96a715cc18912be7678d44bb94925c44 = L.circleMarker(
+                [-37.8158579, 144.9720281],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_bdff40e78e61d901a0465a1b2afd40ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d99d36aa8216889cd24f62a3a048d398 = $(`<div id="html_d99d36aa8216889cd24f62a3a048d398" style="width: 100.0%; height: 100.0%;"><b>Vacation Coffee CBD</b></div>`)[0];
+                popup_bdff40e78e61d901a0465a1b2afd40ee.setContent(html_d99d36aa8216889cd24f62a3a048d398);
+            
+        
+
+        circle_marker_96a715cc18912be7678d44bb94925c44.bindPopup(popup_bdff40e78e61d901a0465a1b2afd40ee)
+        ;
+
+        
+    
+    
+            circle_marker_96a715cc18912be7678d44bb94925c44.bindTooltip(
+                `<div>
+                     Vacation Coffee CBD
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d2c6f6691cfcb18bef72bc7eaa6d88c1 = L.circleMarker(
+                [-37.8014, 144.9672],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_dd5b279b66cd6eece301c24b3aa46c69 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd9bb0327da65f5d6221ac0ba08000cb = $(`<div id="html_cd9bb0327da65f5d6221ac0ba08000cb" style="width: 100.0%; height: 100.0%;"><b>Market Lane Carlton</b></div>`)[0];
+                popup_dd5b279b66cd6eece301c24b3aa46c69.setContent(html_cd9bb0327da65f5d6221ac0ba08000cb);
+            
+        
+
+        circle_marker_d2c6f6691cfcb18bef72bc7eaa6d88c1.bindPopup(popup_dd5b279b66cd6eece301c24b3aa46c69)
+        ;
+
+        
+    
+    
+            circle_marker_d2c6f6691cfcb18bef72bc7eaa6d88c1.bindTooltip(
+                `<div>
+                     Market Lane Carlton
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44722a8d0737fd66c222586675162950 = L.circleMarker(
+                [-37.8109, 144.9668],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_1d30dac60a56fb6b894dc21c0211ff2f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eec8aea9063feea627cc80d408904797 = $(`<div id="html_eec8aea9063feea627cc80d408904797" style="width: 100.0%; height: 100.0%;"><b>Traveller Coffee</b></div>`)[0];
+                popup_1d30dac60a56fb6b894dc21c0211ff2f.setContent(html_eec8aea9063feea627cc80d408904797);
+            
+        
+
+        circle_marker_44722a8d0737fd66c222586675162950.bindPopup(popup_1d30dac60a56fb6b894dc21c0211ff2f)
+        ;
+
+        
+    
+    
+            circle_marker_44722a8d0737fd66c222586675162950.bindTooltip(
+                `<div>
+                     Traveller Coffee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b62ea34b06407e881ada0f59e1c9cd0 = L.circleMarker(
+                [-37.7775, 144.9722],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_44e098a91ffa6a63bad0dd9456e939b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ac2b5f52b2e4dbc76106a93c98133038 = $(`<div id="html_ac2b5f52b2e4dbc76106a93c98133038" style="width: 100.0%; height: 100.0%;"><b>Core Roasters</b></div>`)[0];
+                popup_44e098a91ffa6a63bad0dd9456e939b7.setContent(html_ac2b5f52b2e4dbc76106a93c98133038);
+            
+        
+
+        circle_marker_5b62ea34b06407e881ada0f59e1c9cd0.bindPopup(popup_44e098a91ffa6a63bad0dd9456e939b7)
+        ;
+
+        
+    
+    
+            circle_marker_5b62ea34b06407e881ada0f59e1c9cd0.bindTooltip(
+                `<div>
+                     Core Roasters
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5bf43a61f4f37dbd9548156a66406596 = L.circleMarker(
+                [-37.8175, 144.964],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a6eff49897bc41b12aed1cf9490f2142);
+        
+    
+        var popup_65e73a0dc1e8223274212ab6898cbdae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47624bc32dc68805859b93a44ce72281 = $(`<div id="html_47624bc32dc68805859b93a44ce72281" style="width: 100.0%; height: 100.0%;"><b>Project Zero</b></div>`)[0];
+                popup_65e73a0dc1e8223274212ab6898cbdae.setContent(html_47624bc32dc68805859b93a44ce72281);
+            
+        
+
+        circle_marker_5bf43a61f4f37dbd9548156a66406596.bindPopup(popup_65e73a0dc1e8223274212ab6898cbdae)
+        ;
+
+        
+    
+    
+            circle_marker_5bf43a61f4f37dbd9548156a66406596.bindTooltip(
+                `<div>
+                     Project Zero
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
