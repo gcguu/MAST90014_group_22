@@ -10,3 +10,4 @@ scipy
 ortools
 highspy
 jupyter
+selenium
