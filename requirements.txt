@@ -4,3 +4,10 @@ gurobipy>=11.0
 contextily
 geopandas
 folium
+matplotlib
+plotly
+scipy
+ortools
+highspy
+jupyter
+selenium

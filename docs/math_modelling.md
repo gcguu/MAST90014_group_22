@@ -535,3 +535,17 @@ The model jointly determines:
    - van capacity
    - route duration penalties
    - perishability constraints
+
+   \subsection{Profit-Maximising Vehicle Routing}
+
+Traditional vehicle routing problems primarily focus on minimising transportation cost while serving all customers. However, in many real-world logistics applications, delivery capacity is limited and not all customers can be served profitably.
+
+Ma et al. (2017) studied a combined order selection and vehicle routing problem with time windows for perishable products. Their model jointly determines which customers should be served and how delivery routes should be constructed in order to maximise total profit. The study also considers perishability constraints and traffic-dependent travel times.
+
+This work is closely related to our project because our model also adopts a profit-maximising objective and incorporates perishability through route duration constraints for milk deliveries. Similar to the literature, our model balances product margins, transportation costs, and operational efficiency when constructing delivery routes.
+
+
+
+ proposed a Multi-Product Split Delivery Capacitated Team Orienteering Problem with Incomplete Service and Soft Time Windows for fresh fruit distribution. Their model considers selective delivery, split deliveries, multiple products, and perishability constraints within a profit-oriented routing framework. Due to the complexity of the problem, the authors applied an Adaptive Large Neighborhood Search (ALNS) heuristic to efficiently generate high-quality solutions.
+
+This paper is closely related to our project because our model also involves profit-maximising vehicle routing with multiple products and perishability considerations for milk deliveries. In addition, the study provides several possible future extensions for our model, such as split deliveries, partial demand satisfaction, and soft time window penalties.
